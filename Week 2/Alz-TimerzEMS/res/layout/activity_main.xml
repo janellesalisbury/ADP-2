@@ -2,58 +2,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:background="@color/paleblue">
 
-    <TabHost
-        android:id="@android:id/tabhost"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/username"
+        android:layout_alignLeft="@+id/username"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:text="@string/username_" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="126dp"
+        android:layout_marginRight="17dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </TabWidget>
+    <TextView
+        android:id="@+id/userpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/username"
+        android:layout_alignRight="@+id/textView1"
+        android:text="@string/password" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+    <ImageView
+        android:id="@+id/atlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/password"
+        android:layout_alignLeft="@+id/password"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="41dp"
+        android:src="@drawable/clock" />
 
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                </LinearLayout>
-                               
-                <LinearLayout 
-                    android:id="@+id/tab4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </LinearLayout>
- 
-                    
-          </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/atlogo"
+        android:layout_alignRight="@+id/atlogo"
+        android:layout_marginBottom="18dp"
+        android:text="@string/alz_timerz_ems"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/red" />
 
 </RelativeLayout>
