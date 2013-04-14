@@ -63,4 +63,22 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/red" />
 
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignRight="@+id/atlogo"
+        android:layout_below="@+id/password"
+        android:text="@string/log_in" />
+
+    <Button
+        android:id="@+id/createid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignRight="@+id/login"
+        android:layout_below="@+id/login"
+        android:text="@string/create_account" />
+
 </RelativeLayout>

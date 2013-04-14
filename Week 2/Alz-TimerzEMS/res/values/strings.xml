@@ -9,5 +9,11 @@
     <string name="alz_timerz_ems">Alz-Timerz EMS</string>
     <color name="paleblue">#F0F8FF</color>
     <color name="red">#FF0000</color>
+    <string name="log_in">Log In</string>
+    <string name="create_account">Create Account</string>
+    <string name="label1">Home</string>
+    <string name="label2">Schedules</string>
+    <string name="label3">Requests</string>
+    <string name="label4">Maps</string>
 
 </resources>
