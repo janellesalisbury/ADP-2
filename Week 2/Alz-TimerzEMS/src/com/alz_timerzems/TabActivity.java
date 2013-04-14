@@ -18,13 +18,25 @@ public class TabActivity extends Activity{
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		
 		//CREATE TABS FOR EACH SECTION
+		//Home Tab
 		String label1 = getResources().getString(R.string.label1);
 		Tab home = actionBar.newTab();
 		home.setText(label1);
 		//add tab listener for click functionality
 		TabListener<HomeFragment>t1 = new TabListener<HomeFragment>(this, label1, HomeFragment.class); 
 		home.setTabListener(t1);
+		//add tab to view
 		actionBar.addTab(home);
+		
+		
+		String label2 = getResources().getString(R.string.label2);
+		Tab schedules = actionBar.newTab();
+		schedules.setText(label2);
+		TabListener<SchedulesFragment> tl2 = new TabListener<SchedulesFragment>(this,
+				label2, SchedulesFragment.class);
+		schedules.setTabListener(tl2);
+		actionBar.addTab(schedules);
+		
 	}
 	
 	//CREATE TABLISTENER CLASS
