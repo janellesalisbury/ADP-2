@@ -28,7 +28,7 @@ public class TabActivity extends Activity{
 		//add tab to view
 		actionBar.addTab(home);
 		
-		
+		//SCHEDULES TAB
 		String label2 = getResources().getString(R.string.label2);
 		Tab schedules = actionBar.newTab();
 		schedules.setText(label2);
@@ -36,6 +36,25 @@ public class TabActivity extends Activity{
 				label2, SchedulesFragment.class);
 		schedules.setTabListener(tl2);
 		actionBar.addTab(schedules);
+		
+		//SHIFT REQUESTS TAB
+		String label3 = getResources().getString(R.string.label3);
+		Tab requests = actionBar.newTab();
+		requests.setText(label3);
+		TabListener<RequestsFragment> tl3 = new TabListener<RequestsFragment>(this,
+				label3, RequestsFragment.class);
+		requests.setTabListener(tl3);
+		actionBar.addTab(requests);
+		
+		//MAPS TAB
+		
+		String label4 = getResources().getString(R.string.label4);
+		Tab maps = actionBar.newTab();
+		maps.setText(label4);
+		TabListener<MapsFragment> tl4 = new TabListener<MapsFragment>(this,
+				label4, MapsFragment.class);
+		maps.setTabListener(tl4);
+		actionBar.addTab(maps);
 		
 	}
 	
