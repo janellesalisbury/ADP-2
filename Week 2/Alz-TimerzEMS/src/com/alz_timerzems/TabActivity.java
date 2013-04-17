@@ -6,6 +6,8 @@ import android.app.FragmentTransaction;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 public class TabActivity extends Activity{
 	
@@ -15,6 +17,7 @@ public class TabActivity extends Activity{
 		
 		//CREATE ACTION BAR 
 		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		
 		//CREATE TABS FOR EACH SECTION
@@ -96,6 +99,16 @@ public class TabActivity extends Activity{
 			
 		}
 		
+	}
+
+	
+	
+	//ACTION BAR ITEMS
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.activity_main, menu);
+		return true;
 		
 	}
 
