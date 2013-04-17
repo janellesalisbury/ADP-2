@@ -17,5 +17,7 @@
     <string name="label4">Map</string>
     <string name="add_employee_contact_information">Add Employee Contact Information</string>
     <string name="employee_contact_information">Employee Contact Information</string>
+    <string name="extra_shift_requests_swaps_and_call_offs">Extra Shift Requests, Swaps and Call-Offs</string>
+    <string name="ok">OK</string>
 
 </resources>

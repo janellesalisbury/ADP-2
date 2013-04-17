@@ -5,14 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class RequestsFragment extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		return (LinearLayout) inflater.inflate(R.layout.requests_tab, container, false);
+		return (RelativeLayout) inflater.inflate(R.layout.requests_tab, container, false);
 	}
 
 }

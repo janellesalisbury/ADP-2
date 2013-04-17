@@ -13,6 +13,9 @@ public class HomeFragment extends Fragment{
 			Bundle savedInstanceState) {
 
 		return (RelativeLayout) inflater.inflate(R.layout.home_tab, container, false);
+
+		
+
 		
 		
 	}

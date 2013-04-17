@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TabActivity"/>
+            android:name=".TabActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".RequestForm"/>
         <activity
