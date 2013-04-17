@@ -15,5 +15,7 @@
     <string name="label2">Schedules</string>
     <string name="label3">Requests</string>
     <string name="label4">Map</string>
+    <string name="add_employee_contact_information">Add Employee Contact Information</string>
+    <string name="employee_contact_information">Employee Contact Information</string>
 
 </resources>

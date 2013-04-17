@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent launch = new Intent(MainActivity.this, TabActivity.class);
+				Intent launch = new Intent(MainActivity.this, EmployeeAdd.class);
 				startActivity(launch);
 				
 			}
