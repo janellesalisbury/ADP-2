@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MapsFragment extends Fragment{
 
@@ -13,7 +13,7 @@ public class MapsFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		return (LinearLayout) inflater.inflate(R.layout.maps_tab, container, false);
+		return (RelativeLayout) inflater.inflate(R.layout.maps_tab, container, false);
 	}
 
 }
