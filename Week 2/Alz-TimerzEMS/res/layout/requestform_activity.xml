@@ -14,7 +14,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:text="Shift Change Request "
+        android:text="shift_change_request_"
         android:textColor="@color/red" />
 
     <TextView
@@ -116,6 +116,14 @@
         android:ems="10"
         android:inputType="textMultiLine"
         android:lines="3" />
+
+    <Button
+        android:id="@+id/sumbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Submit" />
     
 </RelativeLayout>
 
