@@ -7,6 +7,13 @@
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    
+    
    
 
     <application
@@ -30,6 +37,15 @@
             android:name=".RequestForm"/>
         <activity
             android:name=".EmployeeAdd"/>
+        <activity
+            android:name=".HomeFragment"/>
+        <activity
+            android:name=".MapsFragment"/>
+        <activity
+            android:name=".RequestsFragment"/>
+        <activity
+            android:name=".SchedulesFragment"/>
+        
         
         
     </application>

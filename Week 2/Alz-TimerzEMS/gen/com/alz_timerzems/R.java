@@ -85,6 +85,7 @@ public final class R {
         public static final int alz_timerz_ems=0x7f040005;
         public static final int app_name=0x7f040000;
         public static final int create_account=0x7f040007;
+        public static final int email_=0x7f040010;
         public static final int employee_contact_information=0x7f04000d;
         public static final int extra_shift_requests_swaps_and_call_offs=0x7f04000e;
         public static final int hello_world=0x7f040001;

@@ -4,22 +4,48 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class HomeFragment extends Fragment{
+	//GLOBAL VARIABLES
+	Button _add_btn;
+	Button _ok_btn;
+	static View _view;
+	
+	@Override 
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		
+		
+	}
+	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		return (RelativeLayout) inflater.inflate(R.layout.home_tab, container, false);
-		
-		//ADD BUTTON
+		   _view =  (RelativeLayout) inflater.inflate(R.layout.home_tab, container, false);
+
+		 //SET BUTTONS (ADD AND OK)
+		   _add_btn = (Button) _view.findViewById(R.id.add);
+		   _ok_btn = (Button) _view.findViewById(R.id.ok);
+		   
+		   //BUTTON FUNCTIONALITY
+		   _add_btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			
+		   
+				
+			}
+		});
 
 		
-
-		
-		
+		return _view;
 	}
 
 }
