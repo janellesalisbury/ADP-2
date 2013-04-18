@@ -20,6 +20,8 @@
     <string name="extra_shift_requests_swaps_and_call_offs">Extra Shift Requests, Swaps and Call-Offs</string>
     <string name="ok">OK</string>
     <string name="email_">Email:</string>
+    <string name="delete">Delete</string>
+    <string name="add">Add</string>
     
 
 </resources>

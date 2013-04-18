@@ -1,6 +1,7 @@
 package com.alz_timerzems;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,12 +34,14 @@ public class HomeFragment extends Fragment{
 		   _add_btn = (Button) _view.findViewById(R.id.add);
 		   _ok_btn = (Button) _view.findViewById(R.id.ok);
 		   
-		   //BUTTON FUNCTIONALITY
+		   //ADD BUTTON FUNCTIONALITY
 		   _add_btn.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-			
+				Intent addForm = new Intent();
+				addForm.setClass(getActivity(), EmployeeAdd.class);
+				startActivity(addForm);				
 		   
 				
 			}

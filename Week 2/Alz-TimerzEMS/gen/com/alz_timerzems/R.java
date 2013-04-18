@@ -30,7 +30,7 @@ public final class R {
         public static final int date=0x7f08001e;
         public static final int date_et=0x7f080020;
         public static final int delete=0x7f080027;
-        public static final int edit=0x7f080028;
+        public static final int edit=0x7f080029;
         public static final int editText1=0x7f08000b;
         public static final int editText2=0x7f080011;
         public static final int editText3=0x7f08000f;
@@ -43,10 +43,10 @@ public final class R {
         public static final int imageView1=0x7f08001a;
         public static final int listView1=0x7f080018;
         public static final int login=0x7f080006;
-        public static final int menu_camera=0x7f08002c;
-        public static final int menu_refresh=0x7f08002b;
-        public static final int menu_search=0x7f08002a;
-        public static final int menu_settings=0x7f080029;
+        public static final int menu_camera=0x7f08002d;
+        public static final int menu_refresh=0x7f08002c;
+        public static final int menu_search=0x7f08002b;
+        public static final int menu_settings=0x7f08002a;
         public static final int mid_header=0x7f080017;
         public static final int mobile=0x7f08000d;
         public static final int name=0x7f08001b;
@@ -55,6 +55,7 @@ public final class R {
         public static final int ok=0x7f080015;
         public static final int password=0x7f080000;
         public static final int reason=0x7f080023;
+        public static final int request=0x7f080028;
         public static final int requestList=0x7f080026;
         public static final int save=0x7f080013;
         public static final int search=0x7f080014;
@@ -81,10 +82,12 @@ public final class R {
         public static final int activity_main=0x7f070000;
     }
     public static final class string {
+        public static final int add=0x7f040012;
         public static final int add_employee_contact_information=0x7f04000c;
         public static final int alz_timerz_ems=0x7f040005;
         public static final int app_name=0x7f040000;
         public static final int create_account=0x7f040007;
+        public static final int delete=0x7f040011;
         public static final int email_=0x7f040010;
         public static final int employee_contact_information=0x7f04000d;
         public static final int extra_shift_requests_swaps_and_call_offs=0x7f04000e;
