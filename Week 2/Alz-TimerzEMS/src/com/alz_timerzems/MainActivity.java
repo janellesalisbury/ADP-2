@@ -1,10 +1,7 @@
 package com.alz_timerzems;
 
-import lib.FileStuff;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.accounts.Account;
-import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -41,6 +38,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				//TODO 
 				//VERIFY USER ACCOUNT
 				//AccountManager am = AccountManager.get(getApplicationContext());
 				//Account[] accounts = am.getAccountsByType("com.google");
