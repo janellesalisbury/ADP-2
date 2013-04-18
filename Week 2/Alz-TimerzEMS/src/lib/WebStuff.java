@@ -1,4 +1,4 @@
-package com.alz_timerzems;
+package lib;
 
 import java.io.BufferedInputStream;
 import java.net.URL;
