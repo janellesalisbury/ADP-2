@@ -6,4 +6,30 @@
     android:background="@color/paleblue"
     tools:context=".SchedulesFragment" >
 
+    <Button
+        android1:id="@+id/add"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentRight="true"
+        android1:layout_alignParentTop="true"
+        android1:text="Add" />
+
+    <Button
+        android1:id="@+id/edit"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_alignParentTop="true"
+        android1:text="Edit" />
+
+    <ImageView
+        android1:id="@+id/imageView1"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentBottom="true"
+        android1:layout_alignParentLeft="true"
+        android1:layout_alignParentRight="true"
+        android1:layout_below="@+id/add"
+        android1:src="@drawable/calendar" />
+
     </RelativeLayout>

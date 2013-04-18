@@ -15,9 +15,10 @@ public final class R {
         public static final int red=0x7f050001;
     }
     public static final class drawable {
-        public static final int clock=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int maps=0x7f020002;
+        public static final int calendar=0x7f020000;
+        public static final int clock=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int maps=0x7f020003;
     }
     public static final class id {
         public static final int add=0x7f080016;
@@ -29,6 +30,7 @@ public final class R {
         public static final int date=0x7f08001e;
         public static final int date_et=0x7f080020;
         public static final int delete=0x7f080027;
+        public static final int edit=0x7f080028;
         public static final int editText1=0x7f08000b;
         public static final int editText2=0x7f080011;
         public static final int editText3=0x7f08000f;
@@ -41,10 +43,10 @@ public final class R {
         public static final int imageView1=0x7f08001a;
         public static final int listView1=0x7f080018;
         public static final int login=0x7f080006;
-        public static final int menu_camera=0x7f08002b;
-        public static final int menu_refresh=0x7f08002a;
-        public static final int menu_search=0x7f080029;
-        public static final int menu_settings=0x7f080028;
+        public static final int menu_camera=0x7f08002c;
+        public static final int menu_refresh=0x7f08002b;
+        public static final int menu_search=0x7f08002a;
+        public static final int menu_settings=0x7f080029;
         public static final int mid_header=0x7f080017;
         public static final int mobile=0x7f08000d;
         public static final int name=0x7f08001b;
