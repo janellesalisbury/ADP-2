@@ -1,7 +1,10 @@
 package com.alz_timerzems;
 
+import lib.FileStuff;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -31,13 +34,17 @@ public class MainActivity extends Activity {
 			Toast toast = Toast.makeText(getApplicationContext(), "No Network Available", Toast.LENGTH_SHORT);
 			toast.show();
 		}
-		
+				
 		//FOR TESTING PURPOSES TO MAKE SURE THE VIEW IS SET UP CORRECTLY WITH THE TABS
 		login = (Button) findViewById(R.id.login);
 		login.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				//VERIFY USER ACCOUNT
+				//AccountManager am = AccountManager.get(getApplicationContext());
+				//Account[] accounts = am.getAccountsByType("com.google");
+
 				Intent launch = new Intent(MainActivity.this, TabActivity.class);
 				startActivity(launch);
 				

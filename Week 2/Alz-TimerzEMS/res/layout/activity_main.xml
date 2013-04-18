@@ -2,55 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/paleblue">
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/username"
-        android:layout_alignLeft="@+id/username"
-        android:layout_marginBottom="41dp"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/password"
-        android:layout_alignParentLeft="true"
-        android:text="@string/username_" />
-
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="126dp"
-        android:layout_marginRight="17dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/userpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/username"
-        android:layout_alignRight="@+id/textView1"
-        android:text="@string/password" />
-
-    <ImageView
-        android:id="@+id/atlogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/password"
-        android:layout_alignLeft="@+id/password"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="41dp"
-        android:src="@drawable/clock" />
+    android:background="@color/paleblue"
+    tools:context=".MainActivity" >
 
     <TextView
         android:id="@+id/title"
@@ -64,21 +17,72 @@
         android:textColor="@color/red" />
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/username"
-        android:layout_alignRight="@+id/atlogo"
-        android:layout_below="@+id/password"
-        android:text="@string/log_in" />
-
-    <Button
         android:id="@+id/createid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/login"
-        android:layout_alignRight="@+id/login"
-        android:layout_below="@+id/login"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
         android:text="@string/create_account" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createid"
+        android:layout_alignLeft="@+id/createid"
+        android:layout_alignRight="@+id/createid"
+        android:text="@string/log_in" />
+
+    <TextView
+        android:id="@+id/userpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/title"
+        android:text="@string/password" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userpassword"
+        android:layout_centerVertical="true"
+        android:text="@string/username_" />
+
+    <ImageView
+        android:id="@+id/atlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_alignRight="@+id/createid"
+        android:layout_marginBottom="23dp"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/clock" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/createid"
+        android:ems="10"
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/userpassword"
+        android:layout_alignBottom="@+id/userpassword"
+        android:layout_alignLeft="@+id/editText1"
+        android:ems="10"
+        android:inputType="textPassword" />
 
 </RelativeLayout>
