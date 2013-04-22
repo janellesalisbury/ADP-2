@@ -3,9 +3,6 @@
     <item android:id="@+id/menu_settings"
           android:title="settings"
           android:showAsAction="ifRoom|withText" />
-    <item android:id="@+id/menu_search"
-          android:title="search"
-          android:showAsAction="ifRoom|withText"/>
     <item android:id="@+id/menu_refresh"
           android:title="refresh"
           android:showAsAction="ifRoom|withText"/>

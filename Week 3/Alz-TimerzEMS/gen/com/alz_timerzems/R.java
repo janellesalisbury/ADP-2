@@ -43,9 +43,8 @@ public final class R {
         public static final int imageView1=0x7f080018;
         public static final int listView1=0x7f080016;
         public static final int login=0x7f080003;
-        public static final int menu_camera=0x7f08002b;
-        public static final int menu_refresh=0x7f08002a;
-        public static final int menu_search=0x7f080029;
+        public static final int menu_camera=0x7f08002a;
+        public static final int menu_refresh=0x7f080029;
         public static final int menu_settings=0x7f080028;
         public static final int mid_header=0x7f080015;
         public static final int mobile=0x7f08000c;

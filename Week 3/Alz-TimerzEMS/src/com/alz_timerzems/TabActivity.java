@@ -1,12 +1,19 @@
 package com.alz_timerzems;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
+
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.view.Menu;
@@ -14,6 +21,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 public class TabActivity extends Activity{
+	//GLOBAL VARIABLE
+	int imageNum = 0;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -122,13 +131,44 @@ public class TabActivity extends Activity{
 		switch(item.getItemId()){
 		case R.id.menu_camera:
 			Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			//SAVE THE IMAGE TO STORAGE
+			File imagesFolder = new File(Environment.getExternalStorageDirectory(), "MyImages");
+			if (!imagesFolder.exists()) {
+				imagesFolder.mkdirs();
+				}
+				else {
+	        String fileName = "image_" + String.valueOf(imageNum) + ".jpg";
+	        File output = new File(imagesFolder, fileName);
+	        while (output.exists()){
+	            imageNum++;
+	            fileName = "image_" + String.valueOf(imageNum) + ".jpg";
+	            output = new File(imagesFolder, fileName);
+	        }
+	        Uri uriSavedImage = Uri.fromFile(output);
+	        //PASS THE IMAGE TO STORAGE
+	        camera.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+
+	        OutputStream imageFileOS;
+	        try {
+	            imageFileOS = getContentResolver().openOutputStream(uriSavedImage);
+	            imageFileOS.write(0);
+	            imageFileOS.flush();
+	            imageFileOS.close();
+
+	         
+
+	        } catch (FileNotFoundException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
 			startActivityForResult(camera, 0);
+		}
 			break;
 		case R.id.menu_refresh:
 			//CODE REFRESH OF PAGES HERE
-			break;
-		case R.id.menu_search:
-			//code for simple search of listview (or webview using google)
 			break;
 		case R.id.menu_settings:
 			Intent settings = new Intent(Settings.ACTION_SETTINGS);
