@@ -42,7 +42,11 @@
         <activity
             android:name=".HomeFragment"/>
         <activity
-            android:name=".MapsFragment"/>
+            android:name=".MapsFragment">
+            <intent-filter>
+                <category android:name="android.intent.category.ACTION_VIEW"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".RequestsFragment"/>
         <activity

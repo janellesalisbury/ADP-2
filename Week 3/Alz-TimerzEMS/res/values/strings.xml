@@ -22,6 +22,8 @@
     <string name="email_">Email:</string>
     <string name="delete">Delete</string>
     <string name="add">Add</string>
+    <string name="launch_google_maps_">"Launch Google Maps "</string>
+    <string name="launch_maps">Launch Maps</string>
     
 
 </resources>
