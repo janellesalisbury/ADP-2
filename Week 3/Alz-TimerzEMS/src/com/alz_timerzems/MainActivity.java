@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 	
 	//GLOBAL VARIABLES
 	Button login;
+	Button create;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,19 +32,38 @@ public class MainActivity extends Activity {
 			toast.show();
 		}
 				
-		//FOR TESTING PURPOSES TO MAKE SURE THE VIEW IS SET UP CORRECTLY WITH THE TABS
+		//LOG IN BUTTON
 		login = (Button) findViewById(R.id.login);
 		login.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				//TODO 
+				 //try{
 				//VERIFY USER ACCOUNT
-				//AccountManager am = AccountManager.get(getApplicationContext());
-				//Account[] accounts = am.getAccountsByType("com.google");
+//				AccountManager am = AccountManager.get(getApplicationContext());
+//				Account[] accounts = am.getAccountsByType("com.google");
+//				String email = accounts[0].name;
+//				String password = accounts[0].type;
+//				FileStuff.storeObjectFile(getBaseContext(), "username", email, false);
+//				FileStuff.storeObjectFile(getBaseContext(), "password", password, false);
 
 				Intent launch = new Intent(MainActivity.this, TabActivity.class);
 				startActivity(launch);
+//				 }catch(Exception e){
+//					Toast error =  Toast.makeText(getApplicationContext(), "Please Create an Account", Toast.LENGTH_SHORT);
+//					error.show();
+//				 }
+			}	
+		});
+		
+		//CREATE ACCOUNT BUTTON
+		create = (Button) findViewById(R.id.createid);
+		create.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent create = new Intent(MainActivity.this, CreateAccount.class);
+				startActivity(create);
 				
 			}
 		});

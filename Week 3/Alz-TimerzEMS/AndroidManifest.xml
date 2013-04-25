@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     
     
    
@@ -42,15 +43,15 @@
         <activity
             android:name=".HomeFragment"/>
         <activity
-            android:name=".MapsFragment">
-            <intent-filter>
-                <category android:name="android.intent.category.ACTION_VIEW"/>
-            </intent-filter>
-        </activity>
+            android:name=".MapsFragment"/>
         <activity
             android:name=".RequestsFragment"/>
         <activity
             android:name=".SchedulesFragment"/>
+        <activity 
+            android:name=".DeveloperInfo"/>
+        <activity
+            android:name=".CreateAccount"/>
         
         
         

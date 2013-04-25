@@ -23,6 +23,7 @@ import android.view.MenuItem;
 public class TabActivity extends Activity{
 	//GLOBAL VARIABLE
 	int imageNum = 0;
+
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -167,8 +168,9 @@ public class TabActivity extends Activity{
 			startActivityForResult(camera, 0);
 		}
 			break;
-		case R.id.menu_refresh:
-			//CODE REFRESH OF PAGES HERE
+		case R.id.menu_info:
+			Intent devInfo = new Intent(TabActivity.this, DeveloperInfo.class);
+			startActivity(devInfo);
 			break;
 		case R.id.menu_settings:
 			Intent settings = new Intent(Settings.ACTION_SETTINGS);
@@ -179,5 +181,6 @@ public class TabActivity extends Activity{
 		return true;
 		
 	}
+
 
 }

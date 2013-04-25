@@ -3,8 +3,8 @@
     <item android:id="@+id/menu_settings"
           android:title="settings"
           android:showAsAction="ifRoom|withText" />
-    <item android:id="@+id/menu_refresh"
-          android:title="refresh"
+    <item android:id="@+id/menu_info"
+          android:title="Developer Info"
           android:showAsAction="ifRoom|withText"/>
     <item android:id="@+id/menu_camera"
           android:title="camera"
