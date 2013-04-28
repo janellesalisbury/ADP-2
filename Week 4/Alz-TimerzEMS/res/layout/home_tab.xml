@@ -5,40 +5,6 @@
     android:background="@color/paleblue"
     tools:context=".HomeFragment" >
 
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:hint="Search" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/ok"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/search"
-        android:layout_alignBottom="@+id/search"
-        android:layout_toRightOf="@+id/search"
-        android:text="@string/ok" />
-
-    <Button
-        android:id="@+id/add"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/ok"
-        android:layout_alignBottom="@+id/ok"
-        android:layout_alignParentRight="true"
-        android:paddingRight="10dp"
-        android:text="Add" />
-
     <TextView
         android:id="@+id/mid_header"
         android:layout_width="wrap_content"
@@ -55,7 +21,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/mid_header" >
+
     </ListView>
+
+    <Button
+        android:id="@+id/ok"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/search"
+        android:layout_alignBottom="@+id/search"
+        android:layout_toLeftOf="@+id/add"
+        android:text="@string/ok" />
+
+    <Button
+        android:id="@+id/add"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ok"
+        android:layout_alignBottom="@+id/ok"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:text="Add" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@+id/ok"
+        android:ems="10"
+        android:hint="Search" />
+
+    <Button
+        android:id="@+id/logout"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ok"
+        android:layout_toLeftOf="@+id/search"
+        android:text="Log Out" />
 
 </RelativeLayout>

@@ -1,5 +1,13 @@
 package com.alz_timerzems;
 
+import com.parse.LogInCallback;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
 import lib.FileStuff;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
@@ -12,6 +20,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -19,6 +28,9 @@ public class MainActivity extends Activity {
 	//GLOBAL VARIABLES
 	Button login;
 	Button create;
+	Button logout;
+	EditText username;
+	EditText password;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,43 +47,62 @@ public class MainActivity extends Activity {
 			toast.show();
 		}
 		
-		//GET ACCOUNT INFO
-		try{
-			AccountManager am = AccountManager.get(getApplicationContext());
-			Account [] acct = am.getAccountsByType("com.google");
-			String userEmail = acct[0].name;
-			FileStuff.storeObjectFile(getBaseContext(), "useremail", userEmail, false);
-			}catch(Exception e){
-				Toast createId = Toast.makeText(getApplicationContext(), "Please create a google account", Toast.LENGTH_SHORT);
-				createId.show();
-			}
+
+		
+		//INITIALIZE PARSE
+		Parse.initialize(this, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu"); 
+
 			
 				
-		//LOG IN BUTTON
+		//SIGN UP
 		login = (Button) findViewById(R.id.login);
+		username = (EditText) findViewById(R.id.editText1);
+		password = (EditText) findViewById(R.id.editText2);
 		login.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				ParseUser user = new ParseUser();
+				user.setUsername(username.getText().toString());
+				user.setPassword(password.getText().toString());
 				
-						Intent launch = new Intent(MainActivity.this, TabActivity.class);
-						startActivity(launch);
+				user.signUpInBackground(new SignUpCallback() {
+					
+					@Override
+					public void done(ParseException e) {
+						if(e == null){
+							Intent launch = new Intent(MainActivity.this, TabActivity.class);
+							startActivity(launch);
+						}else{
+							Intent create = new Intent(MainActivity.this, CreateAccount.class);
+							startActivity(create);
+						}
+						
+					}
+				});
 			
 			}
 				
 		});
 		
-		//CREATE ACCOUNT BUTTON
-		create = (Button) findViewById(R.id.createid);
-		create.setOnClickListener(new OnClickListener() {
+		//LOG IN
+		ParseUser.logInInBackground("my name", "my password", new LogInCallback() {
 			
 			@Override
-			public void onClick(View v) {
-				Intent create = new Intent(MainActivity.this, CreateAccount.class);
-				startActivity(create);
+			public void done(ParseUser user, ParseException e) {
+				if(user !=null){
+				Intent open = new Intent(MainActivity.this, TabActivity.class);
+				startActivity(open);
 				
+			}else{
+				Toast error = Toast.makeText(getApplicationContext(), "Account Not Found",Toast.LENGTH_SHORT);
+				error.show();
 			}
-		});
+		}
+	});
+		
+		
+	
 	}
 }
 

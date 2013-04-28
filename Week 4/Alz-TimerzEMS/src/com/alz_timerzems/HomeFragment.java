@@ -1,5 +1,7 @@
 package com.alz_timerzems;
 
+import com.parse.ParseUser;
+
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ public class HomeFragment extends Fragment{
 	//GLOBAL VARIABLES
 	Button _add_btn;
 	Button _ok_btn;
+	Button logout;
 	static View _view;
 	
 	@Override 
@@ -46,6 +49,21 @@ public class HomeFragment extends Fragment{
 				
 			}
 		});
+		   
+		 //LOG OUT
+			logout = (Button) _view.findViewById(R.id.logout);
+			logout.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					@SuppressWarnings("unused")
+					ParseUser currentUser = ParseUser.getCurrentUser();
+					ParseUser.logOut();
+						
+					}
+			});
+		   
+		   
 
 		
 		return _view;
