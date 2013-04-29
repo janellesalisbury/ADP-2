@@ -2,17 +2,10 @@ package com.alz_timerzems;
 
 import com.parse.LogInCallback;
 import com.parse.Parse;
-import com.parse.ParseAnalytics;
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
-
-import lib.FileStuff;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.accounts.Account;
-import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -28,7 +21,6 @@ public class MainActivity extends Activity {
 	//GLOBAL VARIABLES
 	Button login;
 	Button create;
-	Button logout;
 	EditText username;
 	EditText password;
 
@@ -54,7 +46,7 @@ public class MainActivity extends Activity {
 
 			
 				
-		//SIGN UP
+		//LOG IN
 		login = (Button) findViewById(R.id.login);
 		username = (EditText) findViewById(R.id.editText1);
 		password = (EditText) findViewById(R.id.editText2);
@@ -62,47 +54,35 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				ParseUser user = new ParseUser();
-				user.setUsername(username.getText().toString());
-				user.setPassword(password.getText().toString());
-				
-				user.signUpInBackground(new SignUpCallback() {
+				ParseUser.logInInBackground("my name", "my password", new LogInCallback() {
 					
 					@Override
-					public void done(ParseException e) {
-						if(e == null){
-							Intent launch = new Intent(MainActivity.this, TabActivity.class);
-							startActivity(launch);
-						}else{
-							Intent create = new Intent(MainActivity.this, CreateAccount.class);
-							startActivity(create);
-						}
+					public void done(ParseUser user, ParseException e) {
+						if(user !=null){
+						Intent open = new Intent(MainActivity.this, TabActivity.class);
+						startActivity(open);
 						
+					}else{
+						Toast error = Toast.makeText(getApplicationContext(), "Account Not Found",Toast.LENGTH_SHORT);
+						error.show();
 					}
-				});
+				}
+			});
 			
-			}
-				
+		   }
 		});
-		
-		//LOG IN
-		ParseUser.logInInBackground("my name", "my password", new LogInCallback() {
+		//CREATE ID
+		create = (Button) findViewById(R.id.createid);
+		create.setOnClickListener(new OnClickListener() {
 			
 			@Override
-			public void done(ParseUser user, ParseException e) {
-				if(user !=null){
-				Intent open = new Intent(MainActivity.this, TabActivity.class);
-				startActivity(open);
+			public void onClick(View v) {
+				Intent create = new Intent(MainActivity.this, CreateAccount.class);
+				startActivity(create);
 				
-			}else{
-				Toast error = Toast.makeText(getApplicationContext(), "Account Not Found",Toast.LENGTH_SHORT);
-				error.show();
 			}
-		}
-	});
+		});
 		
-		
-	
 	}
 }
 

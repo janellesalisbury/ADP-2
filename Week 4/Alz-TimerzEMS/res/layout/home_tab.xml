@@ -51,20 +51,14 @@
         android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="29dp"
         android:layout_toLeftOf="@+id/ok"
         android:ems="10"
-        android:hint="Search" />
+        android:hint="Search" >
 
-    <Button
-        android:id="@+id/logout"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/ok"
-        android:layout_toLeftOf="@+id/search"
-        android:text="Log Out" />
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>
