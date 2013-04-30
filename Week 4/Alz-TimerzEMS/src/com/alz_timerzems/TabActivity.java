@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import com.parse.Parse;
+import com.parse.ParseUser;
+
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -28,6 +31,10 @@ public class TabActivity extends Activity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//INITIALIZE PARSE
+		Parse.initialize(this, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu"); 
+
 		
 		//CREATE ACTION BAR 
 		ActionBar actionBar = getActionBar();
@@ -177,6 +184,11 @@ public class TabActivity extends Activity{
 			settings.addCategory(Intent.CATEGORY_LAUNCHER);
 			startActivity(settings);
 			break;
+		case R.id.logout:
+			ParseUser.logOut();
+			ParseUser currentUser = ParseUser.getCurrentUser();
+			Intent logoff = new Intent(TabActivity.this, MainActivity.class);
+			startActivity(logoff);
 		}
 		return true;
 		

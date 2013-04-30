@@ -47,6 +47,7 @@ public final class R {
         public static final int listView1=0x7f08001c;
         public static final int location =0x7f080020;
         public static final int login=0x7f080004;
+        public static final int logout=0x7f080033;
         public static final int menu_camera=0x7f080032;
         public static final int menu_info=0x7f080031;
         public static final int menu_settings=0x7f080030;

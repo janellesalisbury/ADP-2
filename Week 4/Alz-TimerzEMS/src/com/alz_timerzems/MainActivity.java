@@ -44,7 +44,15 @@ public class MainActivity extends Activity {
 		//INITIALIZE PARSE
 		Parse.initialize(this, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu"); 
 
+		//CURRENT USER ALREADY LOGGED IT
+		ParseUser currentUser = ParseUser.getCurrentUser();
+		if(currentUser !=null){
 			
+			Intent go = new Intent(MainActivity.this, TabActivity.class);
+			startActivity(go);
+		}else{
+			//SHOW LOG IN PAGE AS USER NEEDS TO LOG IN
+		}
 				
 		//LOG IN
 		login = (Button) findViewById(R.id.login);
