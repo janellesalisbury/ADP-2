@@ -1,6 +1,6 @@
 package com.alz_timerzems;
 
-import android.app.ListFragment;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-public class RequestsFragment extends ListFragment{
+public class RequestsFragment extends Fragment{
 	
 	//GLOBAL VARIABLES
 	static View _view;
