@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/srName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="65dp"
+        android:text="Name:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/srDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/srName"
+        android:layout_below="@+id/srName"
+        android:layout_marginTop="30dp"
+        android:text="Date:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/srTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/srDate"
+        android:layout_below="@+id/srDate"
+        android:layout_marginTop="29dp"
+        android:text="Time:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/srExcuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/srTime"
+        android:layout_below="@+id/srTime"
+        android:layout_marginTop="30dp"
+        android:text="Reason:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <Button
+        android:id="@+id/srBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/srExcuse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:text="Back" />
+
+</RelativeLayout>
