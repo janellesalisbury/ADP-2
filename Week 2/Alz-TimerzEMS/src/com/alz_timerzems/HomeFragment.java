@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.SimpleAdapter;
 
 public class HomeFragment extends Fragment{
 	//GLOBAL VARIABLES
@@ -33,7 +34,6 @@ public class HomeFragment extends Fragment{
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		
-	
 	}
 	
 
@@ -42,6 +42,7 @@ public class HomeFragment extends Fragment{
 			Bundle savedInstanceState) {
 
 		   _view =  (RelativeLayout) inflater.inflate(R.layout.home_tab, container, false);
+		   employees = (ListView) _view.findViewById(R.id.listView1);
 		   
 			//INITIALIZE PARSE
 			Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
@@ -79,8 +80,9 @@ public class HomeFragment extends Fragment{
 				
 			}
 		});
-		return _view;
+		   return _view;
 	}
+	
 
 	protected void objectRetrievalFailed(){
 		
@@ -90,9 +92,20 @@ public class HomeFragment extends Fragment{
 		HashMap<String, String> names;
 		for(ParseObject hashMap: objects){
 			names = new HashMap<String, String>();
-			names.put("line 1", hashMap.getString("Name"));
-			names.put("line 2", hashMap.getString("Phone"));
+			names.put("name", hashMap.getString("Name"));
+			names.put("mobile", hashMap.getString("Mobile"));
 			list.add(names);
 		}
+		
+		//Info we want to pull from parse and view
+		String[] deets = {"Name", "Mobile"};
+		//assign values to textviews
+		int[] view = {R.id.textName, R.id.textMobile};
+		
+		//create adapter for listview
+		SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
+		employees.setAdapter(adapt);
+		
+		
 	}
 }

@@ -104,15 +104,6 @@
         android:text="Save" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mobile"
-        android:layout_toRightOf="@+id/homePhone"
-        android:ems="10"
-        android:inputType="phone" />
-
-    <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -127,6 +118,16 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/email"
         android:layout_alignLeft="@+id/editText5"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mobile"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
         android:ems="10"
         android:inputType="phone" />
     
