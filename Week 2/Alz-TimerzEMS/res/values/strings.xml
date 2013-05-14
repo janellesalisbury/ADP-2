@@ -36,6 +36,8 @@
     <string name="position_">Position:</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+    <string name="call">Call</string>
+    <string name="back">Back</string>
     
 
 </resources>

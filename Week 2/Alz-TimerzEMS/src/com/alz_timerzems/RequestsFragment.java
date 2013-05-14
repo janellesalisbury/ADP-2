@@ -17,10 +17,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class RequestsFragment extends Fragment{
 	
@@ -99,6 +101,27 @@ public class RequestsFragment extends Fragment{
 		//create adapter for listview
 		SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.requestslist_item, deets2, view2);
 		_requests.setAdapter(adapter); 
+		//go to detail view for more info
+		_requests.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View v, int pos,
+					long id) {
+				@SuppressWarnings("unchecked")
+				HashMap<String, String> detail = (HashMap<String, String>) _requests.getItemAtPosition(pos);
+				Intent intent = new Intent(getActivity(), ShiftRequestDetails.class);
+				intent.putExtra("Details", detail.toString());
+				intent.putExtra("DetailsName", detail.get("name"));
+				intent.putExtra("DetailsTime", detail.get("time"));
+				intent.putExtra("DetailsDate", detail.get("date"));
+				intent.putExtra("DetailsExcuse", detail.get("excuse"));
+				startActivity(intent);
+						
+						
+						
+			}
+		});
+				
 		
 		
 	}

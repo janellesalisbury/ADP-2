@@ -57,4 +57,37 @@
         android:layout_marginTop="85dp"
         android:text="Back" />
 
+    <TextView
+        android:id="@+id/srNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/srName"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/srExcuse" />
+
+    <TextView
+        android:id="@+id/srDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/srDate"
+        android:layout_alignLeft="@+id/srNameTV"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/srTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/srTime"
+        android:layout_alignLeft="@+id/srDateTV"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/srExcuseTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/srExcuse"
+        android:layout_alignLeft="@+id/srTimeTV"
+        android:layout_alignParentRight="true" />
+
 </RelativeLayout>

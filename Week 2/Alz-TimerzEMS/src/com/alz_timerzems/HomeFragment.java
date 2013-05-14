@@ -114,7 +114,18 @@ public class HomeFragment extends Fragment{
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v, int pos,
 					long id) {
-				// TODO Auto-generated method stub
+				@SuppressWarnings("unchecked")
+				HashMap<String, String> detail = (HashMap<String, String>) employees.getItemAtPosition(pos);
+				Intent intent = new Intent(getActivity(), EmployeeDetails.class);
+				intent.putExtra("Details", detail.toString());
+				intent.putExtra("DetailName", detail.get("name"));
+				intent.putExtra("DetailAddress", detail.get("address"));
+				intent.putExtra("DetailPhone", detail.get("phone"));
+				intent.putExtra("DetailMobile", detail.get("mobile"));
+				intent.putExtra("DetailEmail", detail.get("email"));
+				startActivity(intent);
+				
+				
 				
 			}
 		});

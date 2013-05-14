@@ -190,10 +190,6 @@ public class TabActivity extends Activity{
 			Intent logoff = new Intent(TabActivity.this, MainActivity.class);
 			startActivity(logoff);
 			break;
-		case R.id.email:
-			Intent email = new Intent(TabActivity.this, EmailActivity.class);
-			startActivity(email);
-
 		}
 		return true;
 		
