@@ -17,6 +17,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -105,6 +107,17 @@ public class HomeFragment extends Fragment{
 		//create adapter for listview
 		SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
 		employees.setAdapter(adapt);
+		
+		//go to detail view for more info
+		employees.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View v, int pos,
+					long id) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		
 	}

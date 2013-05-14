@@ -32,6 +32,10 @@
     <string name="message_">"Message : "</string>
     <string name="subject_">"Subject : "</string>
     <string name="to_">"To : "</string>
+    <string name="edit">Edit</string>
+    <string name="position_">Position:</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
     
 
 </resources>

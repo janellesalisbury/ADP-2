@@ -37,7 +37,7 @@ public final class R {
         public static final int date_et=0x7f080039;
         public static final int delete=0x7f080045;
         public static final int done=0x7f08000b;
-        public static final int edit=0x7f080049;
+        public static final int edit=0x7f080054;
         public static final int editText1=0x7f080002;
         public static final int editText2=0x7f080000;
         public static final int editText3=0x7f080020;
@@ -52,6 +52,10 @@ public final class R {
         public static final int employeeDetailMobile=0x7f080027;
         public static final int employeeDetailName=0x7f080025;
         public static final int employeeDetailsPhone=0x7f080026;
+        public static final int et_day=0x7f08004e;
+        public static final int et_name=0x7f08004f;
+        public static final int et_pos=0x7f080051;
+        public static final int et_time=0x7f080050;
         public static final int excuse=0x7f08003d;
         public static final int header=0x7f080018;
         public static final int homePhone=0x7f08001c;
@@ -60,17 +64,18 @@ public final class R {
         public static final int listView1=0x7f08002f;
         public static final int location =0x7f080034;
         public static final int login=0x7f080004;
-        public static final int logout=0x7f08004d;
-        public static final int menu_camera=0x7f08004c;
-        public static final int menu_email=0x7f08004e;
-        public static final int menu_info=0x7f08004b;
-        public static final int menu_settings=0x7f08004a;
+        public static final int logout=0x7f080059;
+        public static final int menu_camera=0x7f080058;
+        public static final int menu_email=0x7f08005a;
+        public static final int menu_info=0x7f080057;
+        public static final int menu_settings=0x7f080056;
         public static final int mid_header=0x7f08002d;
         public static final int mobile=0x7f08001b;
         public static final int name=0x7f080021;
         public static final int nameLabel=0x7f080019;
         public static final int nameText=0x7f080047;
         public static final int name_et=0x7f080035;
+        public static final int nevermind=0x7f08004d;
         public static final int ok=0x7f08002e;
         public static final int phone=0x7f080023;
         public static final int pswrdnew=0x7f08000a;
@@ -78,6 +83,13 @@ public final class R {
         public static final int request=0x7f080046;
         public static final int requestList=0x7f080044;
         public static final int save=0x7f08001e;
+        public static final int schedName=0x7f080049;
+        public static final int schedPos=0x7f08004c;
+        public static final int schedShift=0x7f08004a;
+        public static final int schedTime=0x7f08004b;
+        public static final int scheduleInfo=0x7f080053;
+        public static final int scheduleName=0x7f080052;
+        public static final int schedules=0x7f080055;
         public static final int search=0x7f080030;
         public static final int srBack=0x7f080043;
         public static final int srDate=0x7f080040;
@@ -117,8 +129,10 @@ public final class R {
         public static final int requests_details=0x7f03000b;
         public static final int requests_tab=0x7f03000c;
         public static final int requestslist_item=0x7f03000d;
-        public static final int schedules_tab=0x7f03000e;
-        public static final int tab_activity=0x7f03000f;
+        public static final int schedules_form=0x7f03000e;
+        public static final int schedules_listitem=0x7f03000f;
+        public static final int schedules_tab=0x7f030010;
+        public static final int tab_activity=0x7f030011;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
@@ -129,8 +143,10 @@ public final class R {
         public static final int address_=0x7f040016;
         public static final int alz_timerz_ems=0x7f040005;
         public static final int app_name=0x7f040000;
+        public static final int cancel=0x7f04001f;
         public static final int create_account=0x7f040007;
         public static final int delete=0x7f040011;
+        public static final int edit=0x7f04001d;
         public static final int email_=0x7f040010;
         public static final int employee_contact_information=0x7f04000d;
         public static final int extra_shift_requests_swaps_and_call_offs=0x7f04000e;
@@ -149,6 +165,8 @@ public final class R {
         public static final int ok=0x7f04000f;
         public static final int password=0x7f040004;
         public static final int phone_=0x7f040017;
+        public static final int position_=0x7f04001e;
+        public static final int save=0x7f040020;
         public static final int send=0x7f040019;
         public static final int subject_=0x7f04001b;
         public static final int to_=0x7f04001c;

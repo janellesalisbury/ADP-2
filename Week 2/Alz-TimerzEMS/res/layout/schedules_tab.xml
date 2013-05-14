@@ -12,24 +12,22 @@
         android1:layout_height="wrap_content"
         android1:layout_alignParentRight="true"
         android1:layout_alignParentTop="true"
-        android1:text="Add" />
+        android1:text="@string/add" />
 
     <Button
         android1:id="@+id/edit"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
-        android1:layout_alignParentLeft="true"
         android1:layout_alignParentTop="true"
-        android1:text="Edit" />
+        android1:layout_toLeftOf="@+id/add"
+        android1:text="@string/edit" />
 
-    <ImageView
-        android1:id="@+id/imageView1"
-        android1:layout_width="wrap_content"
+    <ListView
+        android1:id="@+id/schedules"
+        android1:layout_width="match_parent"
         android1:layout_height="wrap_content"
-        android1:layout_alignParentBottom="true"
         android1:layout_alignParentLeft="true"
-        android1:layout_alignParentRight="true"
-        android1:layout_below="@+id/add"
-        android1:src="@drawable/calendar" />
+        android1:layout_below="@+id/add" >
+    </ListView>
 
     </RelativeLayout>

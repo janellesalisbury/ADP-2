@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.parse.FindCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -34,6 +35,11 @@ public class RequestsFragment extends Fragment{
 			Bundle savedInstanceState) {
 
 		 _view = (RelativeLayout) inflater.inflate(R.layout.requests_tab, container, false);
+		 
+
+		//INITIALIZE PARSE
+		Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
+			
 		 
 		 //SET BUTTONS (ADD AND DELETE) AND LISTVIEW
 		 _request = (Button) _view.findViewById(R.id.request);

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Enter Employee Shift Info"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="56dp"
+        android:text="Name:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedShift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/schedName"
+        android:layout_below="@+id/schedName"
+        android:layout_marginTop="34dp"
+        android:text="Shift Day:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/schedShift"
+        android:layout_below="@+id/schedShift"
+        android:layout_marginTop="30dp"
+        android:text="Time:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/schedTime"
+        android:layout_centerVertical="true"
+        android:text="@string/position_"
+        android:textColor="@color/red" />
+
+    <Button
+        android:id="@+id/nevermind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nevermind"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:text="@string/save" />
+
+    <EditText
+        android:id="@+id/et_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/schedTime"
+        android:layout_toRightOf="@+id/schedShift"
+        android:ems="10"
+        android:inputType="date" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/schedName"
+        android:layout_alignBottom="@+id/schedName"
+        android:layout_toRightOf="@+id/schedShift"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/schedTime"
+        android:layout_alignLeft="@+id/et_day"
+        android:ems="10"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/et_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/schedPos"
+        android:layout_alignBottom="@+id/schedPos"
+        android:layout_alignLeft="@+id/et_time"
+        android:ems="10" />
+
+</RelativeLayout>

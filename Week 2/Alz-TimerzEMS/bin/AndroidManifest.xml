@@ -58,6 +58,8 @@
             android:name=".ShiftRequestDetails"/>
         <activity
             android:name=".EmailActivity"/>
+        <activity
+            android:name=".ScheduleAdd"/>
         
         
         
