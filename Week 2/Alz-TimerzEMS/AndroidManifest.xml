@@ -52,6 +52,12 @@
             android:name=".DeveloperInfo"/>
         <activity
             android:name=".CreateAccount"/>
+        <activity
+            android:name=".EmployeeDetails"/>
+        <activity
+            android:name=".ShiftRequestDetails"/>
+        <activity
+            android:name=".EmailActivity"/>
         
         
         

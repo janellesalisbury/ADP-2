@@ -86,7 +86,7 @@ public class RequestsFragment extends Fragment{
 		}
 		
 		//Info we want to pull from parse and view
-		String[] deets2 = {"Name", "Date"};
+		String[] deets2 = {"name", "date"};
 		//assign values to textviews
 		int[] view2 = {R.id.nameText, R.id.dateText};
 		

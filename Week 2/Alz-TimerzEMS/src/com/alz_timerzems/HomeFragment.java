@@ -98,7 +98,7 @@ public class HomeFragment extends Fragment{
 		}
 		
 		//Info we want to pull from parse and view
-		String[] deets = {"Name", "Mobile"};
+		String[] deets = {"name", "mobile"};
 		//assign values to textviews
 		int[] view = {R.id.textName, R.id.textMobile};
 		

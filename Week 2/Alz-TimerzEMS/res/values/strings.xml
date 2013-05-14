@@ -28,6 +28,10 @@
     <string name="address_">Address:</string>
     <string name="phone_">Phone:</string>
     <string name="mobile_">Mobile:</string>
+    <string name="send">Send</string>
+    <string name="message_">"Message : "</string>
+    <string name="subject_">"Subject : "</string>
+    <string name="to_">"To : "</string>
     
 
 </resources>
