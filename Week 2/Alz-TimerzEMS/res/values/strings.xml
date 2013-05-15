@@ -38,6 +38,9 @@
     <string name="save">Save</string>
     <string name="call">Call</string>
     <string name="back">Back</string>
+    <string name="day_">Day:</string>
+    <string name="name">Name</string>
+    <string name="time_">Time:</string>
     
 
 </resources>

@@ -186,6 +186,7 @@ public class TabActivity extends Activity{
 			break;
 		case R.id.logout:
 			ParseUser.logOut();
+			@SuppressWarnings("unused")
 			ParseUser currentUser = ParseUser.getCurrentUser();
 			Intent logoff = new Intent(TabActivity.this, MainActivity.class);
 			startActivity(logoff);

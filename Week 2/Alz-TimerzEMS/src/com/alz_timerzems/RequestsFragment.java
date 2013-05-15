@@ -109,7 +109,7 @@ public class RequestsFragment extends Fragment{
 					long id) {
 				@SuppressWarnings("unchecked")
 				HashMap<String, String> detail = (HashMap<String, String>) _requests.getItemAtPosition(pos);
-				Intent intent = new Intent(getActivity(), ShiftRequestDetails.class);
+				Intent intent = new Intent(getActivity(), RequestsDetails.class);
 				intent.putExtra("Details", detail.toString());
 				intent.putExtra("DetailsName", detail.get("name"));
 				intent.putExtra("DetailsTime", detail.get("time"));

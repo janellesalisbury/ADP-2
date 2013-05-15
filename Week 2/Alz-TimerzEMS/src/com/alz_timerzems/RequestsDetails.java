@@ -4,11 +4,13 @@ import com.parse.Parse;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.NetworkInfo.DetailedState;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class ShiftRequestDetails extends Activity{
+public class RequestsDetails extends Activity{
 	//GLOBAL VARIABLES
 	String name;
 	String date;
@@ -18,6 +20,7 @@ public class ShiftRequestDetails extends Activity{
 	TextView srDate;
 	TextView srTime;
 	TextView srExcuse;
+	Button back;
 	
 	@Override 
 	public void onCreate(Bundle savedInstanceState){
@@ -46,6 +49,17 @@ public class ShiftRequestDetails extends Activity{
 		srTime.setText(time);
 		srExcuse.setText(excuse);
 		
+		//BACK BUTTON
+		back = (Button) findViewById(R.id.srBack);
+		back.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent back = new Intent(RequestsDetails.this, TabActivity.class);
+				startActivity(back);
+				
+			}
+		});
 				
 		
 	

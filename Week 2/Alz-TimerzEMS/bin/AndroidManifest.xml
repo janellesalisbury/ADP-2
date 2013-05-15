@@ -55,11 +55,13 @@
         <activity
             android:name=".EmployeeDetails"/>
         <activity
-            android:name=".ShiftRequestDetails"/>
+            android:name="com.alz_timerzems.RequestsDetails"/>
         <activity
             android:name=".EmailActivity"/>
         <activity
             android:name=".ScheduleAdd"/>
+        <activity
+            android:name=".ScheduleDetails"/>
         
         
         
