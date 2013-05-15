@@ -112,16 +112,17 @@ public class SchedulesFragment extends Fragment{
 					HashMap<String, String> detail = (HashMap<String, String>) _schedules.getItemAtPosition(pos);
 					Intent intent = new Intent(getActivity(), ScheduleDetails.class);
 					intent.putExtra("Details", detail.toString());
-					intent.putExtra("DetailsName", detail.get("name"));
-					intent.putExtra("DetailsTime", detail.get("time"));
-					intent.putExtra("DetailsDay", detail.get("day"));
-					intent.putExtra("DetailsPosition", detail.get("position"));
+					intent.putExtra("DetailsName2", detail.get("name"));
+					intent.putExtra("DetailsTime2", detail.get("time"));
+					intent.putExtra("DetailsDay2", detail.get("day"));
+					intent.putExtra("DetailsPosition2", detail.get("position"));
 					startActivity(intent);
 							
 							
 							
 				}
 			});
+					
 			
 			
 		}

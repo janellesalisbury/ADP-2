@@ -41,6 +41,9 @@
     <string name="day_">Day:</string>
     <string name="name">Name</string>
     <string name="time_">Time:</string>
+    <string name="employee_shift_infomation">Employee Shift Infomation</string>
+    <string name="shift_day_">Shift Day:</string>
+    <string name="email">Email</string>
     
 
 </resources>

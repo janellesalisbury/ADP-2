@@ -27,7 +27,7 @@
         android1:layout_width="match_parent"
         android1:layout_height="wrap_content"
         android1:layout_alignParentLeft="true"
-        android1:layout_below="@+id/add" >
+        android1:layout_below="@+id/edit" >
     </ListView>
 
     </RelativeLayout>

@@ -25,7 +25,7 @@
         android:layout_below="@+id/header"
         android:layout_marginTop="28dp"
         android:paddingLeft="5dp"
-        android:text="Name:"
+        android:text="@string/name_"
         android:textSize="18dp" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_below="@+id/nameLabel"
         android:layout_marginTop="27dp"
         android:paddingLeft="5dp"
-        android:text="Address:"
+        android:text="@string/address_"
         android:textSize="14dp" />
 
     <EditText

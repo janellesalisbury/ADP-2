@@ -13,16 +13,15 @@ import android.widget.TextView;
 public class ScheduleDetails extends Activity{
 	//GLOBAL VARIABLES
 	String name;
-	String day;
 	String time;
+	String day;
 	String position;
 	TextView nameTV;
-	TextView dayTV;
 	TextView timeTV;
+	TextView dayTV;
 	TextView positionTV;
 	Button back;
 	
-
 	@Override 
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -31,26 +30,26 @@ public class ScheduleDetails extends Activity{
 		//INITIALIZE PARSE
 		Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
 		
-		//GET PASSED INFO USING INTENT
-		Intent schedules = new Intent();
-		name = schedules.getStringExtra("DetailsName");
-		day = schedules.getStringExtra("DetailsDay");
-		time = schedules.getStringExtra("DetailsTime");
-		position = schedules.getStringExtra("DetailsPosition");
+		//GET PASSED INFO
+		Intent i = new Intent();
+		name = i.getStringExtra("DetailsName2");
+		time = i.getStringExtra("DetailsTime2");
+		day = i.getStringExtra("DetailsDay2");
+		position = i.getStringExtra("DetailsPosition2");
 		
 		//FIND TEXTVIEWS
-		nameTV = (TextView) findViewById(R.id.nametv);
-		dayTV = (TextView) findViewById(R.id.daytv);
-		timeTV = (TextView) findViewById(R.id.timetv);
-		positionTV = (TextView) findViewById(R.id.postv);
+		nameTV = (TextView) findViewById(R.id.schedTV);
+		timeTV = (TextView) findViewById(R.id.timeTV);
+		dayTV = (TextView) findViewById(R.id.shiftTV);
+		positionTV = (TextView) findViewById(R.id.posTV);
 		
 		//SET TEXT
 		nameTV.setText(name);
-		dayTV.setText(day);
 		timeTV.setText(time);
+		dayTV.setText(day);
 		positionTV.setText(position);
 		
-		back = (Button) findViewById(R.id.back2);
+		back = (Button) findViewById(R.id.back);
 		back.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -60,8 +59,9 @@ public class ScheduleDetails extends Activity{
 				
 			}
 		});
-		
 				
+		
+		
 		
 	}
 
