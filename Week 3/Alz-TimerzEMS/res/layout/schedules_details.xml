@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/employee_shift_infomation"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/name_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/schedName"
+        android:layout_below="@+id/schedName"
+        android:layout_marginTop="53dp"
+        android:text="@string/shift_day_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/schedDay"
+        android:layout_below="@+id/schedDay"
+        android:layout_marginTop="44dp"
+        android:text="@string/time_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/schedTime"
+        android:layout_below="@+id/schedTime"
+        android:layout_marginTop="44dp"
+        android:text="@string/position_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/schedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/schedName"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/schedDay"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/shiftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/schedDay"
+        android:layout_alignLeft="@+id/schedTV"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="18dp"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/schedTime"
+        android:layout_alignLeft="@+id/schedTV"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/posTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/schedPos"
+        android:layout_alignBottom="@+id/schedPos"
+        android:layout_alignLeft="@+id/shiftTV"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/red" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/posTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="@string/back" />
+
+</RelativeLayout>
