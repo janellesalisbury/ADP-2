@@ -17,7 +17,7 @@ public class RequestsDetails extends Activity{
 	String newShift;
 	TextView srName;
 	TextView srTrade;
-	TextView srNew;
+	TextView srNewShift;
 	Button back;
 	
 	@Override 
@@ -34,21 +34,21 @@ public class RequestsDetails extends Activity{
 		trade = intent.getStringExtra("DetailsTrade");
 		newShift = intent.getStringExtra("DetailsNewShift");
 		
-		
 		//FIND TEXTVIEWS
 		srName = (TextView) findViewById(R.id.srNameTV);
 		srTrade = (TextView) findViewById(R.id.srTradeTV);
-		srNew = (TextView) findViewById(R.id.newShiftTV);
-		
+		srNewShift = (TextView) findViewById(R.id.srNewShiftTV);
 		
 		//SET TEXT
 		srName.setText(name);
 		srTrade.setText(trade);
-		srNew.setText(newShift);
-	
+		srNewShift.setText(newShift);
+		
+		
+		
 		
 		//BACK BUTTON
-		back = (Button) findViewById(R.id.srBack);
+		back = (Button) findViewById(R.id.srback);
 		back.setOnClickListener(new OnClickListener() {
 			
 			@Override

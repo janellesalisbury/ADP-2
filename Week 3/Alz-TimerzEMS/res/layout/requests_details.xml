@@ -3,4 +3,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="62dp"
+        android:text="Name:" />
+
+    <TextView
+        android:id="@+id/tradeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/nameTV"
+        android:layout_below="@+id/nameTV"
+        android:layout_marginTop="64dp"
+        android:text="Trade:" />
+
+    <TextView
+        android:id="@+id/srTradeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tradeTV"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/tradeTV" />
+
+    <TextView
+        android:id="@+id/srNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tradeTV"
+        android:layout_alignLeft="@+id/srTradeTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/nameTV" />
+
+    <TextView
+        android:id="@+id/newShiftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameTV"
+        android:layout_centerVertical="true"
+        android:text="New Shift:" />
+
+    <TextView
+        android:id="@+id/srNewShiftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newShiftTV"
+        android:layout_alignLeft="@+id/srTradeTV"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/srback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/srNewShiftTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Back" />
+
 </RelativeLayout>
