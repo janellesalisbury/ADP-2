@@ -31,7 +31,7 @@ public class ScheduleDetails extends Activity{
 		Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
 		
 		//GET PASSED INFO
-		Intent i = new Intent();
+		Intent i = getIntent();
 		name = i.getStringExtra("DetailsName2");
 		time = i.getStringExtra("DetailsTime2");
 		day = i.getStringExtra("DetailsDay2");

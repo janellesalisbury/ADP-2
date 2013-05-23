@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -32,6 +33,7 @@ public class SchedulesFragment extends Fragment{
 		Button  _add;
 		Button  _edit;
 		ListView _schedules;
+		
 		
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,7 +86,7 @@ public class SchedulesFragment extends Fragment{
 			
 		}
 		private void initListView(List<ParseObject> objects){
-			ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>(2);
+			final ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>(2);
 			HashMap<String, String> schedules;
 			for(ParseObject hashMap: objects){
 				schedules = new HashMap<String, String>();
@@ -100,7 +102,7 @@ public class SchedulesFragment extends Fragment{
 			int[] view3 = {R.id.scheduleName, R.id.scheduleInfo};
 			
 			//create adapter for listview
-			SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.schedules_listitem, deets3, view3);
+			final SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.schedules_listitem, deets3, view3);
 			_schedules.setAdapter(adapter); 
 			//go to detail view for more info
 			_schedules.setOnItemClickListener(new OnItemClickListener() {
@@ -123,7 +125,17 @@ public class SchedulesFragment extends Fragment{
 				}
 			});
 					
-			
+			_schedules.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+				@Override
+				public boolean onItemLongClick(AdapterView<?> parent, View v,
+						int pos, long id) {
+						list.remove(pos);
+						adapter.notifyDataSetChanged();
+						
+					return false;
+				}
+			});
 			
 		}
 }

@@ -5,11 +5,14 @@ import java.util.List;
 import com.parse.Parse;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -69,11 +72,12 @@ public class EmployeeDetails extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				
+				call();
 				
 			}
 		});
 		
+	
 		//EMAIL INTENT TO EMAIL EMPLOYEE
 		message = (Button) findViewById(R.id.mail);
 		message.setOnClickListener(new OnClickListener() {
@@ -108,8 +112,21 @@ public class EmployeeDetails extends Activity{
 			}
 		});
 		
+		
+			
+		}
+	private void call(){
+		try{
+			Intent call = new Intent(Intent.ACTION_CALL);
+			call.setData(Uri.parse("tel:_passedMobile"));
+			startActivity(call);
+		}catch(ActivityNotFoundException e){
+			Log.e("Call Failed", "Hanging Up");
+		}
+	}
+		
 	
 	}
 	
 		
-}
+

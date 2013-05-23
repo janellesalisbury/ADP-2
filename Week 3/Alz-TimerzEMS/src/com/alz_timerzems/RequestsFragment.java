@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -28,7 +29,6 @@ public class RequestsFragment extends Fragment{
 	
 	//GLOBAL VARIABLES
 	static View _view;
-	Button  _delete;
 	Button  _request;
 	ListView _requests;
 	
@@ -45,7 +45,6 @@ public class RequestsFragment extends Fragment{
 		 
 		 //SET BUTTONS (ADD AND DELETE) AND LISTVIEW
 		 _request = (Button) _view.findViewById(R.id.request);
-		 _delete = (Button) _view.findViewById(R.id.delete);
 		 _requests = (ListView) _view.findViewById(R.id.requestList);
 		 
 		
@@ -83,23 +82,23 @@ public class RequestsFragment extends Fragment{
 		
 	}
 	private void initListView(List<ParseObject> objects){
-		ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>(2);
+		final ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>(2);
 		HashMap<String, String> shiftRequest;
 		for(ParseObject hashMap: objects){
 			shiftRequest = new HashMap<String, String>();
 			shiftRequest.put("name", hashMap.getString("Name"));
-			shiftRequest.put("date", hashMap.getString("Date"));
+			shiftRequest.put("trade", hashMap.getString("Trade"));
 			
 			list.add(shiftRequest);
 		}
 		
 		//Info we want to pull from parse and view
-		String[] deets2 = {"name", "date"};
+		String[] deets2 = {"name", "trade"};
 		//assign values to textviews
 		int[] view2 = {R.id.nameText, R.id.dateText};
 		
 		//create adapter for listview
-		SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.requestslist_item, deets2, view2);
+		final SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.requestslist_item, deets2, view2);
 		_requests.setAdapter(adapter); 
 		//go to detail view for more info
 		_requests.setOnItemClickListener(new OnItemClickListener() {
@@ -112,9 +111,8 @@ public class RequestsFragment extends Fragment{
 				Intent intent = new Intent(getActivity(), RequestsDetails.class);
 				intent.putExtra("Details", detail.toString());
 				intent.putExtra("DetailsName", detail.get("name"));
-				intent.putExtra("DetailsTime", detail.get("time"));
-				intent.putExtra("DetailsDate", detail.get("date"));
-				intent.putExtra("DetailsExcuse", detail.get("excuse"));
+				intent.putExtra("DetailsTrade", detail.get("trade"));
+				intent.putExtra("DetailsNewShift", detail.get("for"));
 				startActivity(intent);
 						
 						
@@ -122,7 +120,16 @@ public class RequestsFragment extends Fragment{
 			}
 		});
 				
-		
+		_requests.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> parent, View v,
+					int pos, long id) {
+					list.remove(pos);
+					adapter.notifyDataSetChanged();
+				return false;
+			}
+		});
 		
 	}
 }

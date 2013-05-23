@@ -19,6 +19,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -90,7 +91,7 @@ public class HomeFragment extends Fragment{
 		
 	}
 	private void initListView(List<ParseObject> objects){
-		ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>(2);
+		final ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>(2);
 		HashMap<String, String> names;
 		for(ParseObject hashMap: objects){
 			names = new HashMap<String, String>();
@@ -105,7 +106,7 @@ public class HomeFragment extends Fragment{
 		int[] view = {R.id.textName, R.id.textMobile};
 		
 		//create adapter for listview
-		SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
+		final SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
 		employees.setAdapter(adapt);
 		
 		//go to detail view for more info
@@ -127,6 +128,21 @@ public class HomeFragment extends Fragment{
 				
 				
 				
+			}
+		});
+		
+		//REMOVE ITEM FROM LISTVIEW
+		employees.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> parent, View v,
+					int pos, long id) {
+					list.remove(pos);
+					adapt.notifyDataSetChanged();
+					
+				
+				
+				return false;
 			}
 		});
 		

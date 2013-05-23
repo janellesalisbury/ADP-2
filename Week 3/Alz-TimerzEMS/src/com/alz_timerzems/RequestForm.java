@@ -14,9 +14,9 @@ import android.widget.EditText;
 
 public class RequestForm extends Activity{
 	EditText name;
-	EditText time;
-	EditText date;
-	EditText reason;
+	EditText trade;
+	EditText newShift;
+	
 	Button submit;
 	
 	@Override
@@ -30,9 +30,9 @@ public class RequestForm extends Activity{
 
 		//PASSED INFO
 		name = (EditText) findViewById(R.id.name_et);
-		time = (EditText) findViewById(R.id.time_et);
-		date = (EditText) findViewById(R.id.date_et);
-		reason = (EditText) findViewById(R.id.excuse);
+		trade = (EditText) findViewById(R.id.trade);
+		newShift = (EditText) findViewById(R.id.date_et);
+		
 		
 		submit = (Button) findViewById(R.id.submit);
 		submit.setOnClickListener(new OnClickListener() {
@@ -42,9 +42,9 @@ public class RequestForm extends Activity{
 				ParseObject shiftRequest = new ParseObject("ShiftRequest");
 				shiftRequest.put("row", "value");
 				shiftRequest.put("Name", name.getText().toString());
-				shiftRequest.put("Time", time.getText().toString());
-				shiftRequest.put("Date", date.getText().toString());
-				shiftRequest.put("Excuse", reason.getText().toString());
+				shiftRequest.put("Trade", trade.getText().toString());
+				shiftRequest.put("For", newShift.getText().toString());
+				
 				shiftRequest.saveInBackground();
 				
 				//INFORMATION THAT WILL BE SENT

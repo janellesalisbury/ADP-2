@@ -48,7 +48,7 @@
         android:layout_alignLeft="@+id/name"
         android:layout_below="@+id/name_et"
         android:layout_marginTop="21dp"
-        android:text="Time:"
+        android:text="Trade"
         android:textSize="18dp" />
 
     <TextView
@@ -58,64 +58,17 @@
         android:layout_alignLeft="@+id/time"
         android:layout_below="@+id/time"
         android:layout_marginTop="25dp"
-        android:text="Date:"
+        android:text="For:"
         android:textSize="18dp" />
-
-    <EditText
-        android:id="@+id/time_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/date"
-        android:layout_alignLeft="@+id/name_et"
-        android:ems="10"
-        android:inputType="time" />
 
     <EditText
         android:id="@+id/date_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/date"
-        android:layout_alignLeft="@+id/time_et"
+        android:layout_alignLeft="@+id/name_et"
         android:ems="10"
         android:inputType="date" />
-
-    <RadioButton
-        android:id="@+id/swap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/date"
-        android:layout_below="@+id/date"
-        android:layout_marginTop="33dp"
-        android:text="Swap Shift" />
-
-    <RadioButton
-        android:id="@+id/callOff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/swap"
-        android:layout_below="@+id/swap"
-        android:layout_marginTop="14dp"
-        android:text="Call Off" />
-
-    <TextView
-        android:id="@+id/reason"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/callOff"
-        android:layout_marginTop="35dp"
-        android:layout_toLeftOf="@+id/date_et"
-        android:text="Reason:"
-        android:textSize="18dp" />
-
-    <EditText
-        android:id="@+id/excuse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/date_et"
-        android:layout_below="@+id/reason"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:lines="3" />
 
     <Button
         android:id="@+id/submit"
@@ -124,6 +77,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Submit" />
+
+    <EditText
+        android:id="@+id/trade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/date_et"
+        android:layout_alignLeft="@+id/date_et"
+        android:ems="10"
+        android:inputType="date" />
     
 </RelativeLayout>
 

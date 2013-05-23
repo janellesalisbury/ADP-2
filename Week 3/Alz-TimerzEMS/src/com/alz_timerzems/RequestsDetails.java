@@ -13,13 +13,11 @@ import android.widget.TextView;
 public class RequestsDetails extends Activity{
 	//GLOBAL VARIABLES
 	String name;
-	String date;
-	String time;
-	String excuse;
+	String trade;
+	String newShift;
 	TextView srName;
-	TextView srDate;
-	TextView srTime;
-	TextView srExcuse;
+	TextView srTrade;
+	TextView srNew;
 	Button back;
 	
 	@Override 
@@ -33,21 +31,21 @@ public class RequestsDetails extends Activity{
 		//GET PASSED INFO USING INTENT
 		Intent intent = getIntent();
 		name = intent.getStringExtra("DetailsName");
-		date = intent.getStringExtra("DetailsDate");
-		time = intent.getStringExtra("DetailsTime");
-		excuse = intent.getStringExtra("DetailsExcuse");
+		trade = intent.getStringExtra("DetailsTrade");
+		newShift = intent.getStringExtra("DetailsNewShift");
+		
 		
 		//FIND TEXTVIEWS
 		srName = (TextView) findViewById(R.id.srNameTV);
-		srDate = (TextView) findViewById(R.id.srDateTV);
-		srTime = (TextView) findViewById(R.id.srTimeTV);
-		srExcuse = (TextView) findViewById(R.id.srExcuseTV);
+		srTrade = (TextView) findViewById(R.id.srTradeTV);
+		srNew = (TextView) findViewById(R.id.newShiftTV);
+		
 		
 		//SET TEXT
 		srName.setText(name);
-		srDate.setText(date);
-		srTime.setText(time);
-		srExcuse.setText(excuse);
+		srTrade.setText(trade);
+		srNew.setText(newShift);
+	
 		
 		//BACK BUTTON
 		back = (Button) findViewById(R.id.srBack);
