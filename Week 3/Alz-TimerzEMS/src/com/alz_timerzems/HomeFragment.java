@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment{
 	//GLOBAL VARIABLES
 	Button _add_btn;
 	Button _ok_btn;
+	Button _update;
 	ListView employees;
 	static View _view;
 	
@@ -98,6 +99,7 @@ public class HomeFragment extends Fragment{
 			names.put("name", hashMap.getString("Name"));
 			names.put("mobile", hashMap.getString("Mobile"));
 			list.add(names);
+			
 		}
 		
 		//Info we want to pull from parse and view
@@ -106,7 +108,7 @@ public class HomeFragment extends Fragment{
 		int[] view = {R.id.textName, R.id.textMobile};
 		
 		//create adapter for listview
-		final SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
+	   final SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
 		employees.setAdapter(adapt);
 		
 		//go to detail view for more info
@@ -147,5 +149,6 @@ public class HomeFragment extends Fragment{
 		});
 		
 		
-	}
+	}	
+	
 }

@@ -26,6 +26,7 @@
         android:layout_marginTop="28dp"
         android:paddingLeft="5dp"
         android:text="@string/name_"
+        android:textColor="@color/red"
         android:textSize="18dp" />
 
     <TextView
@@ -37,6 +38,7 @@
         android:layout_marginTop="27dp"
         android:paddingLeft="5dp"
         android:text="@string/address_"
+        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <EditText
@@ -61,6 +63,7 @@
         android:layout_marginTop="32dp"
         android:paddingLeft="5dp"
         android:text="@string/email_"
+        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <TextView
@@ -72,6 +75,7 @@
         android:layout_marginTop="31dp"
         android:paddingLeft="5dp"
         android:text="Home Phone:"
+        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <TextView
@@ -83,6 +87,7 @@
         android:layout_marginTop="31dp"
         android:paddingLeft="5dp"
         android:text="Mobile:"
+        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <EditText

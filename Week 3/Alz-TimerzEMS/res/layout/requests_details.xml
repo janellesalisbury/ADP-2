@@ -11,7 +11,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="62dp"
-        android:text="Name:" />
+        android:text="Name:"
+        android:textColor="@color/red" />
 
     <TextView
         android:id="@+id/tradeTV"
@@ -20,7 +21,8 @@
         android:layout_alignRight="@+id/nameTV"
         android:layout_below="@+id/nameTV"
         android:layout_marginTop="64dp"
-        android:text="Trade:" />
+        android:text="Trade:"
+        android:textColor="@color/red" />
 
     <TextView
         android:id="@+id/srTradeTV"
@@ -46,7 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/nameTV"
         android:layout_centerVertical="true"
-        android:text="New Shift:" />
+        android:text="New Shift:"
+        android:textColor="@color/red" />
 
     <TextView
         android:id="@+id/srNewShiftTV"

@@ -26,6 +26,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="34dp"
         android:text="Name:"
+        android:textColor="@color/red"
         android:textSize="18dp" />
 
     <EditText
@@ -49,6 +50,7 @@
         android:layout_below="@+id/name_et"
         android:layout_marginTop="21dp"
         android:text="Trade"
+        android:textColor="@color/red"
         android:textSize="18dp" />
 
     <TextView
@@ -59,6 +61,7 @@
         android:layout_below="@+id/time"
         android:layout_marginTop="25dp"
         android:text="For:"
+        android:textColor="@color/red"
         android:textSize="18dp" />
 
     <EditText
