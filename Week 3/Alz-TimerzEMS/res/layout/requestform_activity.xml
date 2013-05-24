@@ -53,17 +53,6 @@
         android:textColor="@color/red"
         android:textSize="18dp" />
 
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/time"
-        android:layout_below="@+id/time"
-        android:layout_marginTop="25dp"
-        android:text="For:"
-        android:textColor="@color/red"
-        android:textSize="18dp" />
-
     <EditText
         android:id="@+id/date_et"
         android:layout_width="wrap_content"
@@ -85,10 +74,21 @@
         android:id="@+id/trade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/date_et"
-        android:layout_alignLeft="@+id/date_et"
+        android:layout_above="@+id/date"
+        android:layout_alignLeft="@+id/name_et"
         android:ems="10"
         android:inputType="date" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time"
+        android:layout_below="@+id/time"
+        android:layout_marginTop="21dp"
+        android:text="For:"
+        android:textColor="@color/red"
+        android:textSize="18dp" />
     
 </RelativeLayout>
 

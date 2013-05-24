@@ -41,19 +41,6 @@
         android:textColor="@color/red"
         android:textSize="14dp" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/nameLabel"
-        android:layout_alignBottom="@+id/nameLabel"
-        android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/nameLabel"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
     <TextView
         android:id="@+id/email"
         android:layout_width="wrap_content"
@@ -135,5 +122,14 @@
         android:layout_marginRight="14dp"
         android:ems="10"
         android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameLabel"
+        android:layout_alignBottom="@+id/nameLabel"
+        android:layout_toRightOf="@+id/homePhone"
+        android:ems="10" />
     
 </RelativeLayout>
