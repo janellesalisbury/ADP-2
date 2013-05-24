@@ -33,6 +33,7 @@ public class EmployeeDetails extends Activity{
 	Button back;
 	Button call;
 	Button message;
+	Button edit;
 	final Context context = this;
 	//had to clone repo, accidentally deleted my project files from my desktop
 	@Override 
@@ -112,9 +113,20 @@ public class EmployeeDetails extends Activity{
 			}
 		});
 		
+	//	EDIT BUTTON
+//		edit = (Button) findViewById(R.id.edit);
+//		edit.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				
+//				
+//			}
+//		});
 		
+	}	
 			
-		}
+		
 	private void call(){
 		try{
 			Intent call = new Intent(Intent.ACTION_CALL);

@@ -92,14 +92,16 @@ public class SchedulesFragment extends Fragment{
 				schedules = new HashMap<String, String>();
 				schedules.put("name", hashMap.getString("Name"));
 				schedules.put("position", hashMap.getString("Position"));
+				schedules.put("time", hashMap.getString("Time"));
+				schedules.put("day", hashMap.getString("Day"));
 				
 				list.add(schedules);
 			}
 			
 			//Info we want to pull from parse and view
-			String[] deets3 = {"name", "position"};
+			String[] deets3 = {"name", "position", "time", "day"};
 			//assign values to textviews
-			int[] view3 = {R.id.scheduleName, R.id.scheduleInfo};
+			int[] view3 = {R.id.scheduleName, R.id.scheduleInfo, R.id.scheduleTime, R.id.scheduleDay};
 			
 			//create adapter for listview
 			final SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.schedules_listitem, deets3, view3);

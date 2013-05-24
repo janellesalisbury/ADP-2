@@ -88,14 +88,15 @@ public class RequestsFragment extends Fragment{
 			shiftRequest = new HashMap<String, String>();
 			shiftRequest.put("name", hashMap.getString("Name"));
 			shiftRequest.put("trade", hashMap.getString("Trade"));
+			shiftRequest.put("new", hashMap.getString("For"));
 			
 			list.add(shiftRequest);
 		}
 		
 		//Info we want to pull from parse and view
-		String[] deets2 = {"name", "trade"};
+		String[] deets2 = {"name", "trade", "new"};
 		//assign values to textviews
-		int[] view2 = {R.id.nameText, R.id.dateText};
+		int[] view2 = {R.id.nameText, R.id.dateText, R.id.newText};
 		
 		//create adapter for listview
 		final SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.requestslist_item, deets2, view2);
@@ -112,7 +113,7 @@ public class RequestsFragment extends Fragment{
 				intent.putExtra("Details", detail.toString());
 				intent.putExtra("DetailsName", detail.get("name"));
 				intent.putExtra("DetailsTrade", detail.get("trade"));
-				intent.putExtra("DetailsNewShift", detail.get("for"));
+				intent.putExtra("DetailsNewShift", detail.get("new"));
 				startActivity(intent);
 						
 						
