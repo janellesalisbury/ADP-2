@@ -98,14 +98,15 @@ public class HomeFragment extends Fragment{
 			names = new HashMap<String, String>();
 			names.put("name", hashMap.getString("Name"));
 			names.put("mobile", hashMap.getString("Mobile"));
+			names.put("phone", hashMap.getString("Phone"));
 			list.add(names);
 			
 		}
 		
 		//Info we want to pull from parse and view
-		String[] deets = {"name", "mobile"};
+		String[] deets = {"name", "mobile", "phone"};
 		//assign values to textviews
-		int[] view = {R.id.textName, R.id.textMobile};
+		int[] view = {R.id.textName, R.id.textMobile, R.id.address};
 		
 		//create adapter for listview
 	   final SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
