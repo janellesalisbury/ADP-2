@@ -15,11 +15,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
@@ -29,7 +27,6 @@ public class RequestsFragment extends Fragment{
 	
 	//GLOBAL VARIABLES
 	static View _view;
-	Button  _request;
 	ListView _requests;
 	
 	@Override
@@ -44,22 +41,11 @@ public class RequestsFragment extends Fragment{
 			
 		 
 		 //SET BUTTONS (ADD AND DELETE) AND LISTVIEW
-		 _request = (Button) _view.findViewById(R.id.request);
+		
 		 _requests = (ListView) _view.findViewById(R.id.requestList);
 		 
 		
-		//BUTTON FUNCTIONALITY
-		_request.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent requestForm = new Intent();
-				requestForm.setClass(getActivity(), RequestForm.class);
-				startActivity(requestForm);
-				
-			}
-		});
-		 
+		
 		ParseQuery query = new ParseQuery("ShiftRequest");
 		   query.whereEqualTo("row", "value");
 		   query.findInBackground(new FindCallback() {

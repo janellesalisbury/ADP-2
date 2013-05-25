@@ -11,18 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/add" >
+        android:layout_below="@+id/mid_header" >
 
     </ListView>
-
-    <Button
-        android:id="@+id/add"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:paddingRight="10dp"
-        android:text="Add" />
 
     <TextView
         android:id="@+id/mid_header"
