@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/employee_contact_information"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="41dp"
+        android:text="@string/name_"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="28dp"
+        android:text="Phone"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/address"
+        android:layout_below="@+id/address"
+        android:layout_marginTop="23dp"
+        android:text="Address:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="30dp"
+        android:text="@string/mobile_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mobile"
+        android:layout_below="@+id/mobile"
+        android:layout_marginTop="36dp"
+        android:text="@string/email_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/employeeDetailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/address"
+        android:layout_alignBottom="@+id/address"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/address" />
+
+    <TextView
+        android:id="@+id/employeeDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignLeft="@+id/employeeDetailAddress"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/name" />
+
+    <TextView
+        android:id="@+id/employeeDetailsPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/phone"
+        android:layout_alignLeft="@+id/employeeDetailAddress"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/employeeDetailMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mobile"
+        android:layout_alignLeft="@+id/employeeDetailsPhone"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/employeeDetailEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back"
+        android:layout_alignLeft="@+id/employeeDetailMobile"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/back"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/back" />
+
+    <Button
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="36dp"
+        android:layout_toRightOf="@+id/back"
+        android:text="Email" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mail"
+        android:layout_alignBottom="@+id/mail"
+        android:layout_alignRight="@+id/back"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit"
+        android:layout_alignBottom="@+id/edit"
+        android:layout_toRightOf="@+id/email"
+        android:text="@string/call" />
+
+</RelativeLayout>
