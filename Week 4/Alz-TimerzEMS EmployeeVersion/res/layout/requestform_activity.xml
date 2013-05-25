@@ -25,9 +25,9 @@
         android:layout_below="@+id/header"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="34dp"
-        android:text="Name:"
+        android:text="@string/name_"
         android:textColor="@color/red"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/name_et"
@@ -49,9 +49,9 @@
         android:layout_alignLeft="@+id/name"
         android:layout_below="@+id/name_et"
         android:layout_marginTop="21dp"
-        android:text="Trade"
+        android:text="@string/trade"
         android:textColor="@color/red"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/date_et"
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Submit" />
+        android:text="@string/submit" />
 
     <EditText
         android:id="@+id/trade"
@@ -86,9 +86,9 @@
         android:layout_alignLeft="@+id/time"
         android:layout_below="@+id/time"
         android:layout_marginTop="21dp"
-        android:text="For:"
+        android:text="@string/for_"
         android:textColor="@color/red"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
     
 </RelativeLayout>
 

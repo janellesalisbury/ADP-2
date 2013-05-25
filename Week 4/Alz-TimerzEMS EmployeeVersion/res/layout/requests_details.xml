@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="62dp"
-        android:text="Name:"
+        android:text="@string/name_"
         android:textColor="@color/red" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_alignRight="@+id/nameTV"
         android:layout_below="@+id/nameTV"
         android:layout_marginTop="64dp"
-        android:text="Trade:"
+        android:text="@string/trade_"
         android:textColor="@color/red" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/nameTV"
         android:layout_centerVertical="true"
-        android:text="New Shift:"
+        android:text="@string/new_shift_"
         android:textColor="@color/red" />
 
     <TextView
@@ -66,6 +66,6 @@
         android:layout_below="@+id/srNewShiftTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="Back" />
+        android:text="@string/back" />
 
 </RelativeLayout>

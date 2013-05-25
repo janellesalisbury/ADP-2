@@ -17,10 +17,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
@@ -30,8 +28,6 @@ public class SchedulesFragment extends Fragment{
 	
 	//GLOBAL VARIABLES
 		static View _view;
-		Button  _add;
-		Button  _edit;
 		ListView _schedules;
 		
 		
@@ -46,23 +42,11 @@ public class SchedulesFragment extends Fragment{
 			Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
 				
 			 
-			 //SET BUTTONS (ADD AND DELETE) AND LISTVIEW
-			 _add = (Button) _view.findViewById(R.id.add);
-			 _edit = (Button) _view.findViewById(R.id.edit);
+			 //SET LISTVIEW
 			 _schedules = (ListView) _view.findViewById(R.id.schedules);
 			 
 			
-			//BUTTON FUNCTIONALITY
-			_add.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					Intent requestForm = new Intent();
-					requestForm.setClass(getActivity(), ScheduleAdd.class);
-					startActivity(requestForm);
-					
-				}
-			});
+			
 			 
 			ParseQuery query = new ParseQuery("SavedEmployeeShift");
 			   query.whereEqualTo("row", "value");

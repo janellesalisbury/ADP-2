@@ -44,6 +44,13 @@
     <string name="employee_shift_infomation">Employee Shift Infomation</string>
     <string name="shift_day_">Shift Day:</string>
     <string name="email">Email</string>
+    <string name="employee_schedules">Employee Schedules</string>
+    <string name="contacts">Contacts</string>
+    <string name="trade">Trade</string>
+    <string name="submit">Submit</string>
+    <string name="for_">For:</string>
+    <string name="trade_">Trade:</string>
+    <string name="new_shift_">New Shift:</string>
     
 
 </resources>

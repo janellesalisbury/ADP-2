@@ -20,7 +20,6 @@ public class MainActivity extends Activity {
 	
 	//GLOBAL VARIABLES
 	Button login;
-	Button create;
 	EditText usernameCreated;
 	EditText passwordCreated;
 
@@ -84,18 +83,7 @@ public class MainActivity extends Activity {
 			
 		   }
 		});
-		//CREATE ID
-		create = (Button) findViewById(R.id.createid);
-		create.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				Intent create = new Intent(MainActivity.this, CreateAccount.class);
-				startActivity(create);
-				
-			}
-		});
+		
 		
 	}
 }

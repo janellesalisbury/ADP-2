@@ -15,21 +15,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 
 public class HomeFragment extends Fragment{
 	//GLOBAL VARIABLES
-	Button _add_btn;
-	Button _ok_btn;
-	Button _update;
+
 	ListView employees;
 	static View _view;
 	
@@ -52,23 +48,10 @@ public class HomeFragment extends Fragment{
 			Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
 			
 		
-		 //SET BUTTONS (ADD AND OK) AND LISTVIEW
-		   _add_btn = (Button) _view.findViewById(R.id.add);
-		   _ok_btn = (Button) _view.findViewById(R.id.ok);
-		   employees = (ListView) _view.findViewById(R.id.listView1);
+		 //SET LISTVIEW
+		  employees = (ListView) _view.findViewById(R.id.listView1);
 		   
-		   //ADD BUTTON FUNCTIONALITY
-		   _add_btn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent addForm = new Intent();
-				addForm.setClass(getActivity(), EmployeeAdd.class);
-				startActivity(addForm);				
-		   
-				
-			}
-		});
+		  
 
 		   ParseQuery query = new ParseQuery("SavedEmployee");
 		   query.whereEqualTo("row", "value");
