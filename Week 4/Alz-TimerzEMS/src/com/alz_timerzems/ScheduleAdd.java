@@ -57,6 +57,17 @@ public class ScheduleAdd extends Activity{
 						
 					}
 				});
+				
+				_cancel = (Button) findViewById(R.id.nevermind);
+				_cancel.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Intent back = new Intent(ScheduleAdd.this, TabActivity.class);
+						startActivity(back);
+						
+					}
+				});
 			
 			}
 			
