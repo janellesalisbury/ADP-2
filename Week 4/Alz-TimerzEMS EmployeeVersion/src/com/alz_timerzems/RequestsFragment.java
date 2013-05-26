@@ -94,9 +94,9 @@ public class RequestsFragment extends Fragment{
 		}
 		
 		//Info we want to pull from parse and view
-		String[] deets2 = {"name", "trade", "new"};
+		String[] deets2 = {"name"};
 		//assign values to textviews
-		int[] view2 = {R.id.nameText, R.id.dateText, R.id.newText};
+		int[] view2 = {R.id.nameText};
 		
 		//create adapter for listview
 		final SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.requestslist_item, deets2, view2);
