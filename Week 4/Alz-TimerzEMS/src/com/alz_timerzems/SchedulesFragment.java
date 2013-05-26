@@ -99,9 +99,9 @@ public class SchedulesFragment extends Fragment{
 			}
 			
 			//Info we want to pull from parse and view
-			String[] deets3 = {"name", "position", "time", "day"};
+			String[] deets3 = {"name", "position"};
 			//assign values to textviews
-			int[] view3 = {R.id.scheduleName, R.id.scheduleInfo, R.id.scheduleTime, R.id.scheduleDay};
+			int[] view3 = {R.id.scheduleName, R.id.scheduleInfo};
 			
 			//create adapter for listview
 			final SimpleAdapter adapter = new SimpleAdapter(getActivity(), list, R.layout.schedules_listitem, deets3, view3);

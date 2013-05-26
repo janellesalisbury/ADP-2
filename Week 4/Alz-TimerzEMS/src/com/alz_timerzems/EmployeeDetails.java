@@ -3,7 +3,6 @@ package com.alz_timerzems;
 import java.util.List;
 
 import com.parse.Parse;
-
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -43,6 +42,7 @@ public class EmployeeDetails extends Activity{
 		
 		//INITIALIZE PARSE
 		Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
+		
 		
 		
 		//GET THE PASSED INFO USING AN INTENT

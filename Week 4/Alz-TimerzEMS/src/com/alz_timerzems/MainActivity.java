@@ -39,11 +39,11 @@ public class MainActivity extends Activity {
 			toast.show();
 		}
 		
-
 		
 		//INITIALIZE PARSE
 		Parse.initialize(this, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu"); 
 
+		
 		//CURRENT USER ALREADY LOGGED IT
 		ParseUser currentUser = ParseUser.getCurrentUser();
 		if(currentUser !=null){
