@@ -5,16 +5,6 @@
     android:background="@color/paleblue"
     tools:context=".MainActivity" >
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/userpassword"
-        android:layout_alignBottom="@+id/userpassword"
-        android:layout_alignLeft="@+id/editText1"
-        android:ems="10"
-        android:inputType="textPassword" />
-
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -26,33 +16,6 @@
         android:text="@string/alz_timerz_ems"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/red" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/atlogo"
-        android:layout_alignRight="@+id/atlogo"
-        android:layout_alignTop="@+id/textView1"
-        android:layout_marginTop="78dp"
-        android:text="@string/log_in" />
-
-    <TextView
-        android:id="@+id/userpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_alignTop="@+id/textView1"
-        android:layout_marginTop="32dp"
-        android:text="@string/password" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="@string/username_" />
 
     <EditText
         android:id="@+id/editText1"
@@ -66,12 +29,62 @@
         <requestFocus />
     </EditText>
 
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/atlogo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/atlogo"
+        android:layout_marginBottom="58dp"
+        android:text="@string/log_in" />
+
+    <TextView
+        android:id="@+id/userpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginBottom="31dp"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/userpassword"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="21dp"
+        android:text="@string/username_" />
+
     <ImageView
         android:id="@+id/atlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
+        android:layout_above="@+id/editText1"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
         android:src="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userpassword"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title"
+        android:gravity="center"
+        android:text="Employee Version"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
 
 </RelativeLayout>

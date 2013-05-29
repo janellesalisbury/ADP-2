@@ -23,8 +23,7 @@
         android:layout_below="@+id/header"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="52dp"
-        android:text="@string/name_"
-        android:textColor="@color/red" />
+        android:text="@string/name_" />
 
     <TextView
         android:id="@+id/schedDay"
@@ -33,8 +32,7 @@
         android:layout_alignLeft="@+id/schedName"
         android:layout_below="@+id/schedName"
         android:layout_marginTop="53dp"
-        android:text="@string/shift_day_"
-        android:textColor="@color/red" />
+        android:text="@string/shift_day_" />
 
     <TextView
         android:id="@+id/schedTime"
@@ -43,8 +41,7 @@
         android:layout_alignLeft="@+id/schedDay"
         android:layout_below="@+id/schedDay"
         android:layout_marginTop="44dp"
-        android:text="@string/time_"
-        android:textColor="@color/red" />
+        android:text="@string/time_" />
 
     <TextView
         android:id="@+id/schedPos"
@@ -53,8 +50,7 @@
         android:layout_alignLeft="@+id/schedTime"
         android:layout_below="@+id/schedTime"
         android:layout_marginTop="44dp"
-        android:text="@string/position_"
-        android:textColor="@color/red" />
+        android:text="@string/position_" />
 
     <TextView
         android:id="@+id/schedTV"
@@ -62,8 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/schedName"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/schedDay"
-        android:textColor="@color/red" />
+        android:layout_toRightOf="@+id/schedDay" />
 
     <TextView
         android:id="@+id/shiftTV"
@@ -72,8 +67,7 @@
         android:layout_alignBottom="@+id/schedDay"
         android:layout_alignLeft="@+id/schedTV"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="18dp"
-        android:textColor="@color/red" />
+        android:layout_marginLeft="18dp" />
 
     <TextView
         android:id="@+id/timeTV"
@@ -81,8 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/schedTime"
         android:layout_alignLeft="@+id/schedTV"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/red" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/posTV"
@@ -91,8 +84,7 @@
         android:layout_alignBaseline="@+id/schedPos"
         android:layout_alignBottom="@+id/schedPos"
         android:layout_alignLeft="@+id/shiftTV"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/red" />
+        android:layout_alignParentRight="true" />
 
     <Button
         android:id="@+id/back"
