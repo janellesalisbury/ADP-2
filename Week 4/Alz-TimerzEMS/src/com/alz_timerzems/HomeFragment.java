@@ -27,8 +27,6 @@ import android.widget.SimpleAdapter;
 public class HomeFragment extends Fragment{
 	//GLOBAL VARIABLES
 	Button _add_btn;
-	Button _ok_btn;
-	Button _update;
 	ListView employees;
 	static View _view;
 	
@@ -53,7 +51,6 @@ public class HomeFragment extends Fragment{
 		
 		 //SET BUTTONS (ADD AND OK) AND LISTVIEW
 		   _add_btn = (Button) _view.findViewById(R.id.add);
-		   _ok_btn = (Button) _view.findViewById(R.id.ok);
 		   employees = (ListView) _view.findViewById(R.id.listView1);
 		   
 		   //ADD BUTTON FUNCTIONALITY
@@ -113,7 +110,7 @@ public class HomeFragment extends Fragment{
 		//create adapter for listview
 	   final SimpleAdapter adapt = new SimpleAdapter(getActivity(), list, R.layout.employeelist_item, deets, view);
 		employees.setAdapter(adapt);
-		
+	
 		
 		//go to detail view for more info
 		employees.setOnItemClickListener(new OnItemClickListener() {
@@ -151,8 +148,14 @@ public class HomeFragment extends Fragment{
 				return false;
 			}
 		});
+
+			
+		}
 		
-		
-	}	
 	
 }
+			
+		
+		
+	
+

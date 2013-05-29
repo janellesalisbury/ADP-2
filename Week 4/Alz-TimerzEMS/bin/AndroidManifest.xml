@@ -39,11 +39,14 @@
         </activity>
         <activity
             android:name=".TabActivity"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden">
+        </activity>
         <activity
             android:name=".RequestForm"/>
+      
         <activity
             android:name=".EmployeeAdd"/>
+        
         <activity
             android:name=".HomeFragment"/>
         <activity
@@ -54,6 +57,7 @@
             android:name=".SchedulesFragment"/>
         <activity 
             android:name=".DeveloperInfo"/>
+           
         <activity
             android:name=".CreateAccount"/>
         <activity
@@ -67,22 +71,15 @@
           
         <activity
             android:name="com.alz_timerzems.RequestsDetails"/>
+        
         <activity
             android:name=".EmailActivity"/>
         <activity
             android:name=".ScheduleAdd"/>
+        
         <activity
             android:name=".ScheduleDetails"/>
-
-        <service android:name="com.parse.PushService" />
-		<receiver android:name="com.parse.ParseBroadcastReceiver">
-  			<intent-filter>
-    			<action android:name="android.intent.action.BOOT_COMPLETED" />
-    			<action android:name="android.intent.action.USER_PRESENT" />
-  			</intent-filter>
-		</receiver>	
-        
-        
+       
     </application>
 
 </manifest>

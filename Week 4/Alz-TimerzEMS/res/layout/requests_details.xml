@@ -29,15 +29,6 @@
         android:layout_alignLeft="@+id/srTradeTV"
         android:layout_alignParentRight="true" />
 
-    <Button
-        android:id="@+id/srback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/srNewShiftTV"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="Back" />
-
     <TextView
         android:id="@+id/requested"
         android:layout_width="wrap_content"
@@ -80,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/requested"
-        android:layout_alignLeft="@+id/srback"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

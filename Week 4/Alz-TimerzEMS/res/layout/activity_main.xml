@@ -35,6 +35,7 @@
         android:layout_alignRight="@+id/atlogo"
         android:layout_alignTop="@+id/textView1"
         android:layout_marginTop="78dp"
+        android:gravity="center"
         android:text="@string/log_in" />
 
     <TextView
@@ -45,26 +46,6 @@
         android:layout_alignTop="@+id/textView1"
         android:layout_marginTop="32dp"
         android:text="@string/password" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="@string/username_" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignParentRight="true"
-        android:ems="10"
-        android:inputType="textEmailAddress" >
-
-        <requestFocus />
-    </EditText>
 
     <ImageView
         android:id="@+id/atlogo"
@@ -82,6 +63,28 @@
         android:layout_alignRight="@+id/login"
         android:layout_below="@+id/login"
         android:layout_marginTop="14dp"
+        android:gravity="center"
         android:text="@string/create_account" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="17dp"
+        android:text="@string/username_" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_alignLeft="@+id/login"
+        android:ems="10"
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

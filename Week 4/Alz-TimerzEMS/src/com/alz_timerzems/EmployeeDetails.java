@@ -1,8 +1,15 @@
 package com.alz_timerzems;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
 
 import com.parse.Parse;
+import com.parse.ParseUser;
+
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -11,7 +18,13 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.provider.Settings;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -33,8 +46,11 @@ public class EmployeeDetails extends Activity{
 	Button call;
 	Button message;
 	Button edit;
+	int imageNum = 0;
+
 	final Context context = this;
-	//had to clone repo, accidentally deleted my project files from my desktop
+	
+	
 	@Override 
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -42,6 +58,9 @@ public class EmployeeDetails extends Activity{
 		
 		//INITIALIZE PARSE
 		Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
+		
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		
 		
@@ -101,29 +120,8 @@ public class EmployeeDetails extends Activity{
 			}
 		});
 		
-		//BACK BUTTON
-		back = (Button) findViewById(R.id.back);
-		back.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent goBack = new Intent(EmployeeDetails.this, TabActivity.class);
-				startActivity(goBack);
-				
-			}
-		});
 		
-	//	EDIT BUTTON
-//		edit = (Button) findViewById(R.id.edit);
-//		edit.setOnClickListener(new OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				
-//				
-//			}
-//		});
-		
+	
 	}	
 			
 		
@@ -136,7 +134,82 @@ public class EmployeeDetails extends Activity{
 			Log.e("Call Failed", "Hanging Up");
 		}
 	}
-		
+	
+	//ACTION BAR ITEMS
+		@Override
+		public boolean onCreateOptionsMenu(Menu menu){
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.activity_main, menu);
+			return true;
+			
+		}
+		//ACTION BAR FUNCTIONALITY
+		public boolean onOptionsItemSelected(MenuItem item){
+			super.onOptionsItemSelected(item);
+			switch(item.getItemId()){
+			case android.R.id.home:
+				Intent back = new Intent(EmployeeDetails.this, TabActivity.class);
+				startActivity(back);
+				break;
+			case R.id.menu_camera:
+				Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				//SAVE THE IMAGE TO STORAGE
+				File imagesFolder = new File(Environment.getExternalStorageDirectory(), "MyImages");
+				if (!imagesFolder.exists()) {
+					imagesFolder.mkdirs();
+					}
+					else {
+		        String fileName = "image_" + String.valueOf(imageNum) + ".jpg";
+		        File output = new File(imagesFolder, fileName);
+		        while (output.exists()){
+		            imageNum++;
+		            fileName = "image_" + String.valueOf(imageNum) + ".jpg";
+		            output = new File(imagesFolder, fileName);
+		        }
+		        Uri uriSavedImage = Uri.fromFile(output);
+		        //PASS THE IMAGE TO STORAGE
+		        camera.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+
+		        OutputStream imageFileOS;
+		        try {
+		            imageFileOS = getContentResolver().openOutputStream(uriSavedImage);
+		            imageFileOS.write(0);
+		            imageFileOS.flush();
+		            imageFileOS.close();
+
+		         
+
+		        } catch (FileNotFoundException e) {
+		            // TODO Auto-generated catch block
+		            e.printStackTrace();
+		        } catch (IOException e) {
+		            // TODO Auto-generated catch block
+		            e.printStackTrace();
+		        }
+				startActivityForResult(camera, 0);
+			}
+				break;
+			case R.id.menu_info:
+				Intent devInfo = new Intent(EmployeeDetails.this, DeveloperInfo.class);
+				startActivity(devInfo);
+				break;
+			case R.id.menu_settings:
+				Intent settings = new Intent(Settings.ACTION_SETTINGS);
+				settings.addCategory(Intent.CATEGORY_LAUNCHER);
+				startActivity(settings);
+				break;
+			case R.id.logout:
+				ParseUser.logOut();
+				@SuppressWarnings("unused")
+				ParseUser currentUser = ParseUser.getCurrentUser();
+				Intent logoff = new Intent(EmployeeDetails.this, MainActivity.class);
+				startActivity(logoff);
+				break;
+			
+			}
+			return true;
+			
+		}
 	
 	}
 	
