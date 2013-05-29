@@ -130,20 +130,11 @@
         android:text="@string/email" />
 
     <Button
-        android:id="@+id/edit"
+        android:id="@+id/call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/mail"
         android:layout_alignBottom="@+id/mail"
-        android:layout_alignRight="@+id/back"
-        android:text="@string/edit" />
-
-    <Button
-        android:id="@+id/call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edit"
-        android:layout_alignBottom="@+id/edit"
         android:layout_toRightOf="@+id/email"
         android:text="@string/call" />
 
