@@ -21,10 +21,12 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.SimpleAdapter;
 
 public class TabActivity extends Activity{
 	//GLOBAL VARIABLE
 	int imageNum = 0;
+	SimpleAdapter adapt;
 
 	
 	@Override
@@ -191,6 +193,9 @@ public class TabActivity extends Activity{
 			Intent logoff = new Intent(TabActivity.this, MainActivity.class);
 			startActivity(logoff);
 			break;
+		case R.id.menu_refresh:
+			adapt.notifyDataSetChanged();
+			
 		}
 		return true;
 		

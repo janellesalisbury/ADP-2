@@ -15,16 +15,6 @@
         android:textColor="@color/red" />
 
     <TextView
-        android:id="@+id/tradeTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/nameTV"
-        android:layout_below="@+id/nameTV"
-        android:layout_marginTop="64dp"
-        android:text="@string/trade_"
-        android:textColor="@color/red" />
-
-    <TextView
         android:id="@+id/srTradeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,15 +33,6 @@
         android:layout_alignTop="@+id/nameTV" />
 
     <TextView
-        android:id="@+id/newShiftTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/nameTV"
-        android:layout_centerVertical="true"
-        android:text="@string/new_shift_"
-        android:textColor="@color/red" />
-
-    <TextView
         android:id="@+id/srNewShiftTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,5 +48,45 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:text="@string/back" />
+
+    <TextView
+        android:id="@+id/tradeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/nameTV"
+        android:layout_below="@+id/nameTV"
+        android:layout_marginTop="42dp"
+        android:text="@string/trade_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/newShiftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameTV"
+        android:layout_below="@+id/tradeTV"
+        android:layout_marginTop="32dp"
+        android:text="@string/new_shift_"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/requested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newShiftTV"
+        android:layout_centerVertical="true"
+        android:text="Requested:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/srRequested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/requested"
+        android:textColor="@color/red" />
 
 </RelativeLayout>

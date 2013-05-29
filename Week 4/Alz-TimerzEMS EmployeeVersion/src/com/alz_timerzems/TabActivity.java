@@ -26,6 +26,7 @@ import android.view.MenuItem;
 public class TabActivity extends Activity{
 	//GLOBAL VARIABLE
 	int imageNum = 0;
+	
 
 	
 	@Override
@@ -191,6 +192,7 @@ public class TabActivity extends Activity{
 			Intent logoff = new Intent(TabActivity.this, MainActivity.class);
 			startActivity(logoff);
 			break;
+		
 		}
 		return true;
 		

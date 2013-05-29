@@ -15,9 +15,11 @@ public class RequestsDetails extends Activity{
 	String name;
 	String trade;
 	String newShift;
+	String requestedShift;
 	TextView srName;
 	TextView srTrade;
 	TextView srNewShift;
+	TextView srRequested;
 	Button back;
 	
 	@Override 
@@ -33,16 +35,20 @@ public class RequestsDetails extends Activity{
 		name = intent.getStringExtra("DetailsName");
 		trade = intent.getStringExtra("DetailsTrade");
 		newShift = intent.getStringExtra("DetailsNewShift");
+		requestedShift = intent.getStringExtra("DetailsRequested");
+		
 		
 		//FIND TEXTVIEWS
 		srName = (TextView) findViewById(R.id.srNameTV);
 		srTrade = (TextView) findViewById(R.id.srTradeTV);
 		srNewShift = (TextView) findViewById(R.id.srNewShiftTV);
+		srRequested = (TextView) findViewById(R.id.srRequested);
 		
 		//SET TEXT
 		srName.setText(name);
 		srTrade.setText(trade);
 		srNewShift.setText(newShift);
+		srRequested.setText(requestedShift);
 		
 		
 		

@@ -58,6 +58,7 @@ public final class R {
         public static final int mail=0x7f080023;
         public static final int menu_camera=0x7f08004b;
         public static final int menu_info=0x7f08004a;
+        public static final int menu_refresh=0x7f08004d;
         public static final int menu_settings=0x7f080049;
         public static final int mid_header=0x7f08002a;
         public static final int mobile=0x7f080014;

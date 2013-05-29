@@ -51,6 +51,7 @@
     <string name="for_">For:</string>
     <string name="trade_">Trade:</string>
     <string name="new_shift_">New Shift:</string>
+    <string name="shift_request_details">Shift Request Details</string>
     
 
 </resources>

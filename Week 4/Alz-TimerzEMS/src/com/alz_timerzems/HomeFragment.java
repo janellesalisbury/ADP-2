@@ -9,7 +9,6 @@ import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;

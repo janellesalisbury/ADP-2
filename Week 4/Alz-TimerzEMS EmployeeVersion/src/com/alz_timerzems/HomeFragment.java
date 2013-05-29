@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
@@ -43,6 +42,7 @@ public class HomeFragment extends Fragment{
 
 		   _view =  (RelativeLayout) inflater.inflate(R.layout.home_tab, container, false);
 		   employees = (ListView) _view.findViewById(R.id.listView1);
+		   
 		   
 			//INITIALIZE PARSE
 			Parse.initialize(null, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu");
@@ -120,22 +120,7 @@ public class HomeFragment extends Fragment{
 			}
 		});
 		
-		//REMOVE ITEM FROM LISTVIEW
-		employees.setOnItemLongClickListener(new OnItemLongClickListener() {
-
-			@Override
-			public boolean onItemLongClick(AdapterView<?> parent, View v,
-					int pos, long id) {
-					list.remove(pos);
-					adapt.notifyDataSetChanged();
-					
-				
-				
-				return false;
-			}
-		});
 		
-		
-	}	
+	}
 	
 }

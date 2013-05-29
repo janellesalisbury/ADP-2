@@ -14,7 +14,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:text="shift_change_request_"
+        android:text="@string/shift_request_details"
         android:textColor="@color/red" />
 
     <TextView
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/submit" />
+        android:text="Submit" />
 
     <EditText
         android:id="@+id/trade"
@@ -89,6 +89,26 @@
         android:text="@string/for_"
         android:textColor="@color/red"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/date"
+        android:layout_below="@+id/date_et"
+        android:layout_marginTop="24dp"
+        android:text="Request Shift:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/red" />
+
+    <EditText
+        android:id="@+id/shiftRequested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/extra"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="date" />
     
 </RelativeLayout>
 

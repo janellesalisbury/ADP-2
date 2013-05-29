@@ -89,6 +89,7 @@ public class RequestsFragment extends Fragment{
 			shiftRequest.put("name", hashMap.getString("Name"));
 			shiftRequest.put("trade", hashMap.getString("Trade"));
 			shiftRequest.put("new", hashMap.getString("For"));
+			shiftRequest.put("request", hashMap.getString("Requested"));
 			
 			list.add(shiftRequest);
 		}
@@ -114,6 +115,7 @@ public class RequestsFragment extends Fragment{
 				intent.putExtra("DetailsName", detail.get("name"));
 				intent.putExtra("DetailsTrade", detail.get("trade"));
 				intent.putExtra("DetailsNewShift", detail.get("new"));
+				intent.putExtra("DetailsRequested", detail.get("request"));
 				startActivity(intent);
 						
 						
