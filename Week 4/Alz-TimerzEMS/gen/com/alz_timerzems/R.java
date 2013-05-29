@@ -26,12 +26,12 @@ public final class R {
         public static final int address=0x7f08001b;
         public static final int addressLabel=0x7f080013;
         public static final int atlogo=0x7f080005;
-        public static final int back=0x7f080022;
-        public static final int call=0x7f080025;
+        public static final int back=0x7f080021;
+        public static final int call=0x7f080024;
         public static final int cancel=0x7f08000d;
         public static final int createid=0x7f080007;
         public static final int done=0x7f08000b;
-        public static final int edit=0x7f080024;
+        public static final int edit=0x7f080023;
         public static final int editText1=0x7f080002;
         public static final int editText2=0x7f080000;
         public static final int editText3=0x7f080019;
@@ -39,7 +39,7 @@ public final class R {
         public static final int editText5=0x7f080016;
         public static final int email=0x7f08000e;
         public static final int employeeDetailAddress=0x7f08001d;
-        public static final int employeeDetailEmail=0x7f080021;
+        public static final int employeeDetailEmail=0x7f080025;
         public static final int employeeDetailMobile=0x7f080020;
         public static final int employeeDetailName=0x7f08001e;
         public static final int employeeDetailsPhone=0x7f08001f;
@@ -55,7 +55,7 @@ public final class R {
         public static final int location =0x7f08002d;
         public static final int login=0x7f080004;
         public static final int logout=0x7f08004e;
-        public static final int mail=0x7f080023;
+        public static final int mail=0x7f080022;
         public static final int menu_camera=0x7f08004d;
         public static final int menu_info=0x7f08004c;
         public static final int menu_settings=0x7f08004b;

@@ -24,8 +24,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="41dp"
         android:text="@string/name_"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/red" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/address"
@@ -35,8 +34,7 @@
         android:layout_below="@+id/name"
         android:layout_marginTop="28dp"
         android:text="Phone"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/red" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/phone"
@@ -45,8 +43,7 @@
         android:layout_alignLeft="@+id/address"
         android:layout_below="@+id/address"
         android:layout_marginTop="23dp"
-        android:text="Address:"
-        android:textColor="@color/red" />
+        android:text="Address:" />
 
     <TextView
         android:id="@+id/mobile"
@@ -55,8 +52,7 @@
         android:layout_alignLeft="@+id/phone"
         android:layout_below="@+id/phone"
         android:layout_marginTop="30dp"
-        android:text="@string/mobile_"
-        android:textColor="@color/red" />
+        android:text="@string/mobile_" />
 
     <TextView
         android:id="@+id/email"
@@ -65,8 +61,7 @@
         android:layout_alignLeft="@+id/mobile"
         android:layout_below="@+id/mobile"
         android:layout_marginTop="36dp"
-        android:text="@string/email_"
-        android:textColor="@color/red" />
+        android:text="@string/email_" />
 
     <TextView
         android:id="@+id/employeeDetailAddress"
@@ -101,14 +96,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/mobile"
         android:layout_alignLeft="@+id/employeeDetailsPhone"
-        android:layout_alignParentRight="true" />
-
-    <TextView
-        android:id="@+id/employeeDetailEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/back"
-        android:layout_alignLeft="@+id/employeeDetailMobile"
         android:layout_alignParentRight="true" />
 
     <Button
@@ -146,5 +133,14 @@
         android:layout_alignBottom="@+id/edit"
         android:layout_toRightOf="@+id/email"
         android:text="@string/call" />
+
+    <TextView
+        android:id="@+id/employeeDetailEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/email"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/email"
+        android:layout_toRightOf="@+id/phone" />
 
 </RelativeLayout>

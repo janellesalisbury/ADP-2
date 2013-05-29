@@ -23,8 +23,7 @@
         android:layout_below="@+id/header"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="56dp"
-        android:text="Name:"
-        android:textColor="@color/red" />
+        android:text="Name:" />
 
     <TextView
         android:id="@+id/schedShift"
@@ -33,8 +32,7 @@
         android:layout_alignLeft="@+id/schedName"
         android:layout_below="@+id/schedName"
         android:layout_marginTop="34dp"
-        android:text="Shift Day:"
-        android:textColor="@color/red" />
+        android:text="Shift Day:" />
 
     <TextView
         android:id="@+id/schedTime"
@@ -43,8 +41,7 @@
         android:layout_alignLeft="@+id/schedShift"
         android:layout_below="@+id/schedShift"
         android:layout_marginTop="30dp"
-        android:text="Time:"
-        android:textColor="@color/red" />
+        android:text="Time:" />
 
     <TextView
         android:id="@+id/schedPos"
@@ -52,8 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/schedTime"
         android:layout_centerVertical="true"
-        android:text="@string/position_"
-        android:textColor="@color/red" />
+        android:text="@string/position_" />
 
     <Button
         android:id="@+id/nevermind"

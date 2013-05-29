@@ -10,8 +10,7 @@
         android:layout_alignBottom="@+id/tradeTV"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/tradeTV"
-        android:textColor="@color/red" />
+        android:layout_toRightOf="@+id/tradeTV" />
 
     <TextView
         android:id="@+id/srNameTV"
@@ -20,8 +19,7 @@
         android:layout_above="@+id/tradeTV"
         android:layout_alignLeft="@+id/srTradeTV"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/nameTV"
-        android:textColor="@color/red" />
+        android:layout_alignTop="@+id/nameTV" />
 
     <TextView
         android:id="@+id/srNewShiftTV"
@@ -29,8 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/newShiftTV"
         android:layout_alignLeft="@+id/srTradeTV"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/red" />
+        android:layout_alignParentRight="true" />
 
     <Button
         android:id="@+id/srback"
@@ -49,8 +46,7 @@
         android:layout_marginTop="24dp"
         android:layout_toLeftOf="@+id/editText1"
         android:text="Shift Requested:"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/red" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/newShiftTV"
@@ -59,8 +55,7 @@
         android:layout_alignLeft="@+id/requested"
         android:layout_below="@+id/tradeTV"
         android:layout_marginTop="27dp"
-        android:text="New Shift:"
-        android:textColor="@color/red" />
+        android:text="New Shift:" />
 
     <TextView
         android:id="@+id/tradeTV"
@@ -69,8 +64,7 @@
         android:layout_alignLeft="@+id/newShiftTV"
         android:layout_below="@+id/nameTV"
         android:layout_marginTop="26dp"
-        android:text="Trade:"
-        android:textColor="@color/red" />
+        android:text="Trade:" />
 
     <TextView
         android:id="@+id/nameTV"
@@ -79,8 +73,7 @@
         android:layout_alignLeft="@+id/tradeTV"
         android:layout_alignParentTop="true"
         android:layout_marginTop="62dp"
-        android:text="Name:"
-        android:textColor="@color/red" />
+        android:text="Name:" />
 
     <TextView
         android:id="@+id/requestedShift"
@@ -88,7 +81,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/requested"
         android:layout_alignLeft="@+id/srback"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/red" />
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

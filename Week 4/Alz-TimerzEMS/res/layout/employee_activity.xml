@@ -26,7 +26,6 @@
         android:layout_marginTop="28dp"
         android:paddingLeft="5dp"
         android:text="@string/name_"
-        android:textColor="@color/red"
         android:textSize="18dp" />
 
     <TextView
@@ -38,7 +37,6 @@
         android:layout_marginTop="27dp"
         android:paddingLeft="5dp"
         android:text="@string/address_"
-        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <TextView
@@ -50,7 +48,6 @@
         android:layout_marginTop="32dp"
         android:paddingLeft="5dp"
         android:text="@string/email_"
-        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <TextView
@@ -62,7 +59,6 @@
         android:layout_marginTop="31dp"
         android:paddingLeft="5dp"
         android:text="Home Phone:"
-        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <TextView
@@ -74,7 +70,6 @@
         android:layout_marginTop="31dp"
         android:paddingLeft="5dp"
         android:text="Mobile:"
-        android:textColor="@color/red"
         android:textSize="14dp" />
 
     <EditText
@@ -84,8 +79,7 @@
         android:layout_alignBottom="@+id/email"
         android:layout_alignLeft="@+id/editText2"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/red" />
+        android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/save"
@@ -103,8 +97,7 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/editText1"
         android:ems="10"
-        android:inputType="textPostalAddress"
-        android:textColorHint="@color/red" />
+        android:inputType="textPostalAddress" />
 
     <EditText
         android:id="@+id/editText4"
@@ -113,8 +106,7 @@
         android:layout_above="@+id/email"
         android:layout_alignLeft="@+id/editText5"
         android:ems="10"
-        android:inputType="phone"
-        android:textColor="@color/red" />
+        android:inputType="phone" />
 
     <EditText
         android:id="@+id/editText3"
@@ -124,8 +116,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="14dp"
         android:ems="10"
-        android:inputType="phone"
-        android:textColor="@color/red" />
+        android:inputType="phone" />
 
     <EditText
         android:id="@+id/editText1"
@@ -134,7 +125,6 @@
         android:layout_alignBaseline="@+id/nameLabel"
         android:layout_alignBottom="@+id/nameLabel"
         android:layout_toRightOf="@+id/homePhone"
-        android:ems="10"
-        android:textColor="@color/red" />
+        android:ems="10" />
     
 </RelativeLayout>
