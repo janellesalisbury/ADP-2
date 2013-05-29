@@ -193,9 +193,7 @@ public class TabActivity extends Activity{
 			Intent logoff = new Intent(TabActivity.this, MainActivity.class);
 			startActivity(logoff);
 			break;
-		case R.id.menu_refresh:
-			adapt.notifyDataSetChanged();
-			
+		
 		}
 		return true;
 		

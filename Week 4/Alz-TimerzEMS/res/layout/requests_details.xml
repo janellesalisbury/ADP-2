@@ -4,34 +4,14 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/nameTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="62dp"
-        android:text="Name:"
-        android:textColor="@color/red" />
-
-    <TextView
-        android:id="@+id/tradeTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/nameTV"
-        android:layout_below="@+id/nameTV"
-        android:layout_marginTop="64dp"
-        android:text="Trade:"
-        android:textColor="@color/red" />
-
-    <TextView
         android:id="@+id/srTradeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tradeTV"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/tradeTV" />
+        android:layout_toRightOf="@+id/tradeTV"
+        android:textColor="@color/red" />
 
     <TextView
         android:id="@+id/srNameTV"
@@ -40,15 +20,7 @@
         android:layout_above="@+id/tradeTV"
         android:layout_alignLeft="@+id/srTradeTV"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/nameTV" />
-
-    <TextView
-        android:id="@+id/newShiftTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/nameTV"
-        android:layout_centerVertical="true"
-        android:text="New Shift:"
+        android:layout_alignTop="@+id/nameTV"
         android:textColor="@color/red" />
 
     <TextView
@@ -57,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/newShiftTV"
         android:layout_alignLeft="@+id/srTradeTV"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:textColor="@color/red" />
 
     <Button
         android:id="@+id/srback"
@@ -67,5 +40,55 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:text="Back" />
+
+    <TextView
+        android:id="@+id/requested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/srNewShiftTV"
+        android:layout_marginTop="24dp"
+        android:layout_toLeftOf="@+id/editText1"
+        android:text="Shift Requested:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/newShiftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/requested"
+        android:layout_below="@+id/tradeTV"
+        android:layout_marginTop="27dp"
+        android:text="New Shift:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/tradeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newShiftTV"
+        android:layout_below="@+id/nameTV"
+        android:layout_marginTop="26dp"
+        android:text="Trade:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tradeTV"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp"
+        android:text="Name:"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/requestedShift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/requested"
+        android:layout_alignLeft="@+id/srback"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/red" />
 
 </RelativeLayout>
