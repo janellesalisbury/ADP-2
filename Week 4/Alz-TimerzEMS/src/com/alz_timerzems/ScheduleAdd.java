@@ -42,10 +42,6 @@ public class ScheduleAdd extends Activity{
 		//INITIALIZE PARSE
 				Parse.initialize(this, "9A7rNDmuRqbEQAkuK8CsvTKqXwJ8neVE6ZYPpJOz", "MQOtWDlSgfllhr1L91oy8VfrPWuBEbNePtCVFgzu"); 
 				
-				ActionBar actionBar = getActionBar();
-				actionBar.setDisplayHomeAsUpEnabled(true);
-
-				
 				//Passed imformation
 				_name = (EditText) findViewById(R.id.et_name);
 				_day = (EditText) findViewById(R.id.et_day);
