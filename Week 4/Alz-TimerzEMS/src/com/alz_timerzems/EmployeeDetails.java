@@ -120,10 +120,9 @@ public class EmployeeDetails extends Activity{
 			}
 		});
 		
-		
 	
 	}	
-			
+		
 		
 	private void call(){
 		try{
